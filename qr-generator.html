@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator - Toolora</title>
+  <style>
+    body { font-family: Arial; background: #f5f5f5; text-align: center; padding: 20px; }
+    .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    input { width: 90%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+    button { background: #007bff; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    #qrcode { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>QR Code Generator</h1>
+    <p>Koi bhi link ya text likho aur QR banao</p>
+    <input type="text" id="text" placeholder="https://google.com">
+    <br>
+    <button onclick="makeQR()">Generate QR</button>
+    <div id="qrcode"></div>
+    <br><br>
+    <a href="/">← Back to Home</a>
+  </div>
+
+<script>
+function makeQR() {
+  let text = document.getElementById("text").value;
+  if(text == "") { alert("Pehle kuch likho"); return; }
+  document.getElementById("qrcode").innerHTML = 
+  '<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + text + '" />';
+}
+</script>
+</body>
+</html>
