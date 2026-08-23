@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Counter - Toolora</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+<div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl">
+  <h1 class="text-2xl font-bold mb-2 text-center">Word Counter</h1>
+  <p class="text-gray-500 mb-6 text-center">Apne text ke words, characters count karo</p>
+  
+  <textarea id="textInput" onkeyup="countWords()" placeholder="Yahan apna text paste karo..." 
+  class="w-full h-48 border p-3 rounded-lg"></textarea>
+  
+  <div class="mt-4 grid grid-cols-3 gap-4 text-center">
+    <div class="bg-blue-50 p-3 rounded"><p class="text-2xl font-bold" id="wordCount">0</p><p>Words</p></div>
+    <div class="bg-green-50 p-3 rounded"><p class="text-2xl font-bold" id="charCount">0</p><p>Characters</p></div>
+    <div class="bg-purple-50 p-3 rounded"><p class="text-2xl font-bold" id="sentenceCount">0</p><p>Sentences</p></div>
+  </div>
+  
+  <a href="/" class="block mt-6 text-center text-blue-500">← Back to Home</a>
+</div>
+
+<script>
+function countWords() {
+  const text = document.getElementById('textInput').value;
+  const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+  
+  document.getElementById('wordCount').innerText = words.length;
+  document.getElementById('charCount').innerText = text.length;
+  document.getElementById('sentenceCount').innerText = sentences.length;
+}
+</script>
+</body>
+</html>
