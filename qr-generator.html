@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Code Generator - Toolora</title>
-  <style>
-    body { font-family: Arial; background: #f5f5f5; text-align: center; padding: 20px; }
-    .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    input { width: 90%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
-    button { background: #007bff; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 16px; }
-    #qrcode { margin-top: 20px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Toolora</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>QR Code Generator</h1>
-    <p>Koi bhi link ya text likho aur QR banao</p>
-    <input type="text" id="text" placeholder="https://google.com">
-    <br>
-    <button onclick="makeQR()">Generate QR</button>
-    <div id="qrcode"></div>
-    <br><br>
-    <a href="/">← Back to Home</a>
-  </div>
 
-<script>
-function makeQR() {
-  let text = document.getElementById("text").value;
-  if(text == "") { alert("Pehle kuch likho"); return; }
-  document.getElementById("qrcode").innerHTML = 
-  '<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + text + '" />';
-}
-</script>
+    <header>
+        <h1>QR Code Generator</h1>
+        <a href="/">← Back to Home</a>
+    </header>
+
+    <div class="container">
+        <h2>Link ya Text se QR Banao</h2>
+        <input type="text" id="link" placeholder="Enter URL ya Text">
+        <button onclick="makeQR()">Generate QR</button>
+        <div id="qrBox">
+            <img id="qr" src="" alt="QR Code will appear here">
+            <br>
+            <a id="download" href="#" download="qrcode.png">Download QR</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Toolora. Made with ❤️</p>
+    </footer>
+
+    <script async="async" data-cfasync="false" src="https://pl30981924.profitableratecpmnetwork.com/3684f4319d8cea1f9e2a95e40ca25cef/invoke.js"></script>
+    <div id="container-3684f4319d8cea1f9e2a95e40ca25cef"></div>
+
+    <script>
+        function makeQR() {
+            let link = document.getElementById("link").value;
+            if(link == ""){
+                alert("Please enter some text or URL");
+                return;
+            }
+            let qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" + encodeURIComponent(link);
+            document.getElementById("qr").src = qrUrl;
+            document.getElementById("download").href = qrUrl;
+            document.getElementById("qrBox").style.display = "block";
+        }
+    </script>
+
+    <style>
+        #qrBox{ display:none; margin-top:20px; }
+        #qr{ border:2px solid #ddd; padding:10px; border-radius:10px; }
+        #download{ display:inline-block; margin-top:10px; padding:8px 15px; background:#007bff; color:white; text-decoration:none; border-radius:5px; }
+    </style>
+
 </body>
 </html>
