@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator - Toolora</title>
+  <style>
+    body { font-family: Arial; background: #f5f5f5; text-align: center; padding: 20px; }
+    .container { max-width: 400px; margin: auto; background: white; padding: 30px; border-radius: 10px; }
+    input { width: 90%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+    button { background: #28a745; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <input type="number" id="weight" placeholder="Weight in KG">
+    <input type="number" id="height" placeholder="Height in CM">
+    <br>
+    <button onclick="calcBMI()">Calculate BMI</button>
+    <div id="result" style="margin-top:20px; font-weight:bold;"></div>
+    <br><br>
+    <a href="/">← Back to Home</a>
+  </div>
+<script>
+function calcBMI() {
+  let w = document.getElementById("weight").value;
+  let h = document.getElementById("height").value / 100;
+  let bmi = (w / (h*h)).toFixed(2);
+  let status = bmi < 18.5 ? "Underweight" : bmi < 25 ? "Normal" : "Overweight";
+  document.getElementById("result").innerHTML = "Your BMI: " + bmi + "<br>" + status;
+}
+</script>
+</body>
+</html>
