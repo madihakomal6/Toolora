@@ -15,9 +15,13 @@
 
     <div class="container">
         <h2>Words aur Characters Count Karo</h2>
-        <textarea id="text" rows="10" placeholder="Yahan text paste karo"></textarea>
-        <p>Words: <span id="words">0</span></p>
-        <p>Characters: <span id="chars">0</span></p>
+        <textarea id="text" rows="10" placeholder="Yahan text paste karo ya likho"></textarea>
+        <div class="result-box">
+            <p><b>Words:</b> <span id="words">0</span></p>
+            <p><b>Characters:</b> <span id="chars">0</span></p>
+            <p><b>Characters without space:</b> <span id="charsNoSpace">0</span></p>
+            <p><b>Paragraphs:</b> <span id="para">0</span></p>
+        </div>
     </div>
 
     <footer>
@@ -30,8 +34,20 @@
     <script>
         document.getElementById("text").oninput = function() {
             let txt = this.value;
-            document.getElementById("words").innerText = txt.trim().split(/\s+/).filter(Boolean).length;
+            
+            // Words count
+            let words = txt.trim().split(/\s+/).filter(Boolean).length;
+            document.getElementById("words").innerText = words;
+            
+            // Characters count
             document.getElementById("chars").innerText = txt.length;
+            
+            // Characters without space
+            document.getElementById("charsNoSpace").innerText = txt.replace(/\s/g, '').length;
+            
+            // Paragraphs count
+            let para = txt.split(/\n+/).filter(Boolean).length;
+            document.getElementById("para").innerText = para;
         }
     </script>
 
