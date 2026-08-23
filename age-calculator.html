@@ -30,9 +30,17 @@
     <script>
         function calculateAge() {
             let dob = document.getElementById("dob").value;
+            if(dob == ""){
+                document.getElementById("result").innerText = "Please select date";
+                return;
+            }
             let today = new Date();
             let birthDate = new Date(dob);
             let age = today.getFullYear() - birthDate.getFullYear();
+            let m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
             document.getElementById("result").innerText = "Your Age: " + age + " Years";
         }
     </script>
