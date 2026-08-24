@@ -3,74 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Grammar Checker - Toolora</title>
+  <title>Toolora - 100+ Free Pro AI & Online Tools</title>
+  <meta name="description" content="Toolora provides 100% Free, Fast & No Ads AI tools like Resume Builder, Grammar Checker, Age Calculator, BMI, QR Generator and more.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22><path fill=%22white%22 d=%22M256 48c-114.9 0-208 93.1-208 208s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48z%22/></svg>">
+
   <style>
-    *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI'}
-    body{background: linear-gradient(-45deg, #667eea, #764ba2); min-height:100vh; color:#fff; padding:40px 20px}
-    .back-btn{display:inline-block; margin-bottom:20px; color:#fff; text-decoration:none; background:rgba(255,255,255,0.2); padding:10px 20px; border-radius:50px}
-    .container{max-width:900px; margin:0 auto; background:rgba(255,255,255,0.1); backdrop-filter:blur(12px); padding:30px; border-radius:20px; border:1px solid rgba(255,255,255,0.2)}
-    h1{text-align:center; margin-bottom:10px}
-    p.subtitle{text-align:center; opacity:0.8; margin-bottom:30px}
-    textarea{width:100%; height:250px; padding:15px; border-radius:10px; border:none; font-size:1.1rem; margin-bottom:20px; outline:none; color:#000}
-    .btns{display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:20px}
-    button{padding:15px; border:none; border-radius:10px; background:#fff; color:#764ba2; font-size:1.1rem; font-weight:700; cursor:pointer}
-    button:hover{background:#f0f0f0}
-    #output{background:#000; color:#0f0; padding:20px; border-radius:10px; margin-top:20px; min-height:250px; white-space:pre-wrap; font-size:1.1rem}
+    *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+    body{
+      background: linear-gradient(-45deg, #667eea, #764ba2, #6B8CE3, #8A2BE2);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      min-height:100vh; color:#fff
+    }
+    @keyframes gradient {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    
+    header{text-align:center; padding:50px 20px 20px}
+    header .logo{width:100px; height:100px; margin-bottom:20px; filter: drop-shadow(0 0 20px rgba(255,255,255,0.6))}
+    header h1{font-size:3.5rem; margin-bottom:10px; font-weight:800}
+    header p{font-size:1.3rem; opacity:0.9; margin-bottom:30px}
+    
+    .search-box{max-width:600px; margin:0 auto 30px}
+    .search-box input{width:100%; padding:15px 20px; border:none; border-radius:50px; font-size:1.1rem; outline:none}
+    
+    .stats{display:flex; justify-content:center; gap:60px; margin-bottom:20px; flex-wrap:wrap}
+    .stat h2{font-size:2.5rem} .stat p{opacity:0.8}
+    
+    .ad-container{max-width:728px; margin:0 auto 30px; text-align:center; min-height:90px}
+    
+    .container{max-width:1200px; margin:0 auto; padding:20px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px}
+    .card{
+      background:rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2); color:#fff; 
+      padding:30px; border-radius:20px; text-align:center; transition:0.4s; text-decoration:none;
+    }
+    .card:hover{transform:translateY(-10px) scale(1.03); background:rgba(255, 255, 255, 0.2)}
+    .card .icon{font-size:3.5rem; margin-bottom:15px}
+    .card h3{font-size:1.5rem; margin-bottom:10px}
+    .card p{opacity:0.8; font-size:0.95rem}
+    
+    footer{text-align:center; padding:40px; opacity:0.7}
   </style>
 </head>
 <body>
-  <a href="/" class="back-btn">← Back to Home</a>
-  <div class="container">
-    <h1>✍️ AI Grammar Checker + Paraphraser</h1>
-    <p class="subtitle">Fix Grammar Mistakes & Make AI Text 100% Human</p>
+  <header>
+    <!-- PRO LOGO SVG -->
+    <svg class="logo" viewBox="0 0 512 512" fill="white">
+      <path d="M256 48c-114.9 0-208 93.1-208 208s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm100.4 164.8l-74.2-21.7c-3.8-1.1-7.7.4-10.2 3.5l-33.5 47.6c-14.1-7.2-26.5-16.9-36.3-28.5l47.6-33.5c3.1-2.5 4.6-6.4 3.5-10.2l-21.7-74.2c-1.5-5-6-8.6-11.3-8.6h-66c-5.3 0-9.8 3.5-11.3 8.6l-21.7 74.2c-1.1 3.8.4 7.7 3.5 10.2l47.6 33.5c-9.8 11.6-22.2 21.3-36.3 28.5l-33.5-47.6c-2.5-3.1-6.4-4.6-10.2-3.5l-74.2 21.7c-5 1.5-8.6 6-8.6 11.3v66c0 5.3 3.5 9.8 8.6 11.3l74.2 21.7c3.8 1.1 7.7-.4 10.2-3.5l33.5-47.6c14.1 7.2 26.5 16.9 36.3 28.5l-47.6 33.5c-3.1 2.5-4.6 6.4-3.5 10.2l21.7 74.2c1.5 5 6 8.6 11.3 8.6h66c5.3 0 9.8-3.5 11.3-8.6l21.7-74.2c1.1-3.8-.4-7.7-3.5-10.2l-47.6-33.5c9.8-11.6 22.2-21.3 36.3-28.5l33.5 47.6c2.5 3.1 6.4 4.6 10.2 3.5l74.2-21.7c5-1.5 8.6-6 8.6-11.3v-66c0-5.3-3.5-9.8-8.6-11.3z"/>
+      <path d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm0 160c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z"/>
+    </svg>
+    <h1>Toolora</h1>
+    <p>The Last Toolkit You Will Ever Need</p>
     
-    <textarea id="input" placeholder="Paste your text here... Example: i am going to market. it are very good."></textarea>
-    
-    <div class="btns">
-      <button id="btnGrammar">✅ Check Grammar</button>
-      <button id="btnHuman">🤖 Humanize Text</button>
+    <div class="search-box"><input type="text" placeholder="Search for a tool... e.g. Resume Builder"></div>
+
+    <div class="stats">
+      <div class="stat"><h2>50+</h2><p>Free Tools</p></div>
+      <div class="stat"><h2>100%</h2><p>Free Forever</p></div>
     </div>
-    
-    <div id="output">Output will appear here...</div>
+  </header>
+
+  <!-- TUMHARA ADSTERRA AD -->
+  <div class="ad-container">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '684f72a06ca4900db27330af64556cd8',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="https://www.highrevenueformat.com/684f72a06ca4900db27330af64556cd8/invoke.js"></script>
   </div>
 
-  <script>
-    // Button pe click lagaya hai, onclick nahi
-    document.getElementById('btnGrammar').addEventListener('click', checkGrammar);
-    document.getElementById('btnHuman').addEventListener('click', paraphrase);
-
-    function checkGrammar() {
-      let text = document.getElementById('input').value;
-      if(text.trim() === '') {
-        alert('Please paste some text first');
-        return;
-      }
+  <div class="container">
+    <div class="grid">
+      <!-- AI TOOLS -->
+      <a href="/ai-resume-builder.html" class="card"><div class="icon">📄</div><h3>AI Resume Builder</h3><p>Create Professional Resume in 1 Minute</p></a>
+      <a href="/ai-grammar.html" class="card"><div class="icon">✍️</div><h3>AI Grammar Checker</h3><p>Fix Grammar & Paraphrase Text</p></a>
       
-      let fixed = text;
-      fixed = fixed.replace(/\bi\b/g, 'I');
-      fixed = fixed.replace(/they is/g, 'they are');
-      fixed = fixed.replace(/he are/g, 'he is');
-      fixed = fixed.replace(/  +/g, '); // YE WALI LINE THEEK KI HAI
-      fixed = fixed.charAt(0).toUpperCase() + fixed.slice(1);
+      <!-- OTHER TOOLS -->
+      <a href="/age-calculator.html" class="card"><div class="icon">🎂</div><h3>Age Calculator</h3><p>Find your exact age</p></a>
+      <a href="/bmi-calculator.html" class="card"><div class="icon">⚖️</div><h3>BMI Calculator</h3><p>Check your health status</p></a>
+      <a href="/qr-generator.html" class="card"><div class="icon">📱</div><h3>QR Generator</h3><p>Create QR Codes</p></a>
+      <a href="/image-to-jpg.html" class="card"><div class="icon">🖼️</div><h3>Image to JPG</h3><p>Convert PNG to JPG</p></a>
+      <a href="/word-counter.html" class="card"><div class="icon">📝</div><h3>Word Counter</h3><p>Count words</p></a>
+      <a href="/password-generator.html" class="card"><div class="icon">🔒</div><h3>Password Generator</h3><p>Generate passwords</p></a>
+    </div>
+  </div>
 
-      document.getElementById('output').innerText = "✅ Grammar Fixed Version:\n\n" + fixed;
-    }
-    
-    function paraphrase() {
-      let text = document.getElementById('input').value;
-      if(text.trim() === '') {
-        alert('Please paste some text first');
-        return;
-      }
-      
-      let human = text;
-      human = human.replace(/Furthermore/g, 'Also');
-      human = human.replace(/Moreover/g, 'Plus');
-      human = human.replace(/Utilize/g, 'Use');
-      human = human.replace(/  +/g, '); // YE BHI THEEK KI
-
-      document.getElementById('output').innerText = "🤖 Humanized Version:\n\n" + human;
-    }
-  </script>
+  <footer>© 2026 Toolora. Made with ❤️ in Pakistan 🇵🇰</footer>
 </body>
-</html>
+                                                    </html>
