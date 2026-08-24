@@ -3,34 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toolora - Free Online Tools</title>
+  <title>Toolora - 100+ Free Pro Online Tools</title>
+  <link rel="icon" type="image/png" href="/logo.png">
+
   <style>
     *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif}
-    body{background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height:100vh; color:#fff}
     
-    header{text-align:center; padding:40px 20px}
-    header .logo{width:80px; height:80px; margin-bottom:15px} /* Apne logo ke liye */
-    header h1{font-size:2.8rem; margin-bottom:10px}
-    header p{font-size:1.1rem; opacity:0.9}
+    /* ANIMATED BACKGROUND */
+    body{
+      background: linear-gradient(-45deg, #667eea, #764ba2, #6B8CE3, #8A2BE2);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      min-height:100vh; color:#fff
+    }
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
     
-    .container{max-width:1000px; margin:0 auto; padding:20px}
-    .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px}
+    header{text-align:center; padding:60px 20px}
+    header .logo{
+      width:100px; 
+      height:100px; 
+      margin-bottom:20px; 
+      filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(255,255,255,0.5)); /* GLOW EFFECT */
+    }
+    header h1{font-size:3.5rem; margin-bottom:10px; font-weight:800}
+    header p{font-size:1.3rem; opacity:0.9; margin-bottom:30px}
     
-    .card{background:#fff; color:#333; padding:25px; border-radius:20px; text-align:center; transition:0.3s; text-decoration:none; box-shadow:0 8px 25px rgba(0,0,0,0.15)}
-    .card:hover{transform:translateY(-8px)}
+    /* SEARCH BAR */
+    .search-box{max-width:600px; margin:0 auto}
+    .search-box input{
+      width:100%; padding:15px 20px; border:none; border-radius:50px; 
+      font-size:1.1rem; outline:none;
+    }
+    
+    /* STATS */
+    .stats{display:flex; justify-content:center; gap:40px; margin-top:40px; flex-wrap:wrap}
+    .stat h2{font-size:2.5rem}
+    .stat p{opacity:0.8}
+    
+    .container{max-width:1200px; margin:0 auto; padding:20px}
+    
+    /* GLASS CARDS */
+    .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px}
+    .card{
+      background:rgba(255, 255, 255, 0.1); 
+      backdrop-filter: blur(10px); /* GLASS EFFECT */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color:#fff; 
+      padding:30px; 
+      border-radius:20px; 
+      text-align:center; 
+      transition:0.4s; 
+      text-decoration:none;
+    }
+    .card:hover{
+      transform:translateY(-10px) scale(1.03); 
+      background:rgba(255, 255, 255, 0.2);
+      box-shadow:0 20px 40px rgba(0,0,0,0.3)
+    }
     .card .icon{font-size:3.5rem; margin-bottom:15px}
-    .card h3{font-size:1.4rem; margin-bottom:8px; color:#667eea}
-    .card p{color:#666; font-size:0.95rem}
+    .card h3{font-size:1.5rem; margin-bottom:10px}
+    .card p{opacity:0.8; font-size:0.95rem}
     
-    footer{text-align:center; padding:30px; opacity:0.8; font-size:0.9rem}
+    footer{text-align:center; padding:40px; opacity:0.7}
   </style>
 </head>
 <body>
   <header>
-    <!-- Yahan apna logo lag jayega -->
     <img src="/logo.png" alt="Toolora Logo" class="logo"> 
     <h1>Toolora</h1>
-    <p>100% Free, Fast & No Ads Tools</p>
+    <p>The Last Toolkit You Will Ever Need</p>
+    
+    <div class="search-box">
+      <input type="text" placeholder="Search for a tool... e.g. Age Calculator">
+    </div>
+
+    <div class="stats">
+      <div class="stat"><h2>50+</h2><p>Free Tools</p></div>
+      <div class="stat"><h2>0</h2><p>Ads</p></div>
+      <div class="stat"><h2>100%</h2><p>Free Forever</p></div>
+    </div>
   </header>
 
   <div class="container">
@@ -45,25 +100,25 @@
       <a href="/bmi-calculator.html" class="card">
         <div class="icon">⚖️</div>
         <h3>BMI Calculator</h3>
-        <p>Check your Body Mass Index instantly</p>
+        <p>Check your Body Mass Index and health status</p>
       </a>
 
       <a href="/qr-generator.html" class="card">
         <div class="icon">📱</div>
-        <h3>QR Generator</h3>
-        <p>Create QR Codes for any text or URL</p>
+        <h3>QR Code Generator</h3>
+        <p>Create QR Codes for any text, URL or WhatsApp</p>
       </a>
 
       <a href="/image-to-jpg.html" class="card">
         <div class="icon">🖼️</div>
         <h3>Image to JPG</h3>
-        <p>Convert any image to JPG format</p>
+        <p>Convert PNG, WebP to JPG in 1 Click</p>
       </a>
 
       <a href="/word-counter.html" class="card">
         <div class="icon">📝</div>
         <h3>Word Counter</h3>
-        <p>Count words, characters & paragraphs</p>
+        <p>Count words, characters & reading time</p>
       </a>
 
       <a href="/password-generator.html" class="card">
@@ -76,7 +131,7 @@
   </div>
 
   <footer>
-    © 2026 Toolora. All Rights Reserved. Made in Pakistan 🇵🇰
+    © 2026 Toolora. All Rights Reserved. Made with ❤️ in Pakistan 🇵🇰
   </footer>
 </body>
 </html>
