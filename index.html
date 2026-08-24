@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toolora - 100+ Free Pro Online Tools</title>
-  <link rel="icon" type="image/png" href="/logo.png">
+  
+  <!-- FAVICON FIX -->
+  <link rel="icon" href="./logo.png">
+  <link rel="apple-touch-icon" href="./logo.png">
 
   <style>
     *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif}
     
-    /* ANIMATED BACKGROUND */
     body{
       background: linear-gradient(-45deg, #667eea, #764ba2, #6B8CE3, #8A2BE2);
       background-size: 400% 400%;
@@ -27,30 +29,26 @@
       width:100px; 
       height:100px; 
       margin-bottom:20px; 
-      filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(255,255,255,0.5)); /* GLOW EFFECT */
+      filter: drop-shadow(0 0 15px rgba(255,255,255,0.5)); /* GLOW */
     }
     header h1{font-size:3.5rem; margin-bottom:10px; font-weight:800}
     header p{font-size:1.3rem; opacity:0.9; margin-bottom:30px}
     
-    /* SEARCH BAR */
     .search-box{max-width:600px; margin:0 auto}
     .search-box input{
       width:100%; padding:15px 20px; border:none; border-radius:50px; 
       font-size:1.1rem; outline:none;
     }
     
-    /* STATS */
     .stats{display:flex; justify-content:center; gap:40px; margin-top:40px; flex-wrap:wrap}
     .stat h2{font-size:2.5rem}
     .stat p{opacity:0.8}
     
     .container{max-width:1200px; margin:0 auto; padding:20px}
-    
-    /* GLASS CARDS */
     .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px}
     .card{
       background:rgba(255, 255, 255, 0.1); 
-      backdrop-filter: blur(10px); /* GLASS EFFECT */
+      backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
       color:#fff; 
       padding:30px; 
@@ -62,7 +60,6 @@
     .card:hover{
       transform:translateY(-10px) scale(1.03); 
       background:rgba(255, 255, 255, 0.2);
-      box-shadow:0 20px 40px rgba(0,0,0,0.3)
     }
     .card .icon{font-size:3.5rem; margin-bottom:15px}
     .card h3{font-size:1.5rem; margin-bottom:10px}
@@ -73,7 +70,8 @@
 </head>
 <body>
   <header>
-    <img src="/logo.png" alt="Toolora Logo" class="logo"> 
+    <!-- LOGO YAHAN AAYEGA -->
+    <img src="./logo.png" alt="Toolora Logo" class="logo"> 
     <h1>Toolora</h1>
     <p>The Last Toolkit You Will Ever Need</p>
     
@@ -90,48 +88,12 @@
 
   <div class="container">
     <div class="grid">
-      
-      <a href="/age-calculator.html" class="card">
-        <div class="icon">🎂</div>
-        <h3>Age Calculator</h3>
-        <p>Find your exact age in Years, Months & Days</p>
-      </a>
-
-      <a href="/bmi-calculator.html" class="card">
-        <div class="icon">⚖️</div>
-        <h3>BMI Calculator</h3>
-        <p>Check your Body Mass Index and health status</p>
-      </a>
-
-      <a href="/qr-generator.html" class="card">
-        <div class="icon">📱</div>
-        <h3>QR Code Generator</h3>
-        <p>Create QR Codes for any text, URL or WhatsApp</p>
-      </a>
-
-      <a href="/image-to-jpg.html" class="card">
-        <div class="icon">🖼️</div>
-        <h3>Image to JPG</h3>
-        <p>Convert PNG, WebP to JPG in 1 Click</p>
-      </a>
-
-      <a href="/word-counter.html" class="card">
-        <div class="icon">📝</div>
-        <h3>Word Counter</h3>
-        <p>Count words, characters & reading time</p>
-      </a>
-
-      <a href="/password-generator.html" class="card">
-        <div class="icon">🔒</div>
-        <h3>Password Generator</h3>
-        <p>Generate strong & secure passwords</p>
-      </a>
-
+      <a href="/age-calculator.html" class="card"><div class="icon">🎂</div><h3>Age Calculator</h3><p>Find your exact age</p></a>
+      <a href="/bmi-calculator.html" class="card"><div class="icon">⚖️</div><h3>BMI Calculator</h3><p>Check your health status</p></a>
+      <a href="/qr-generator.html" class="card"><div class="icon">📱</div><h3>QR Generator</h3><p>Create QR Codes</p></a>
     </div>
   </div>
 
-  <footer>
-    © 2026 Toolora. All Rights Reserved. Made with ❤️ in Pakistan 🇵🇰
-  </footer>
+  <footer>© 2026 Toolora. Made with ❤️ in Pakistan 🇵🇰</footer>
 </body>
 </html>
