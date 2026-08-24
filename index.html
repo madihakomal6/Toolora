@@ -9,26 +9,26 @@
     *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif}
     body{background: linear-gradient(135deg, #667eea, #764ba2); min-height:100vh; color:#fff}
     header{text-align:center; padding:30px 15px}
-    header.main-logo{width:200px; max-width:70%; height:auto; margin:0 auto 15px; display:block} /* YAHAN FIX KIYA */
+    header h1{font-size:3rem; margin-bottom:10px; background: linear-gradient(90deg, #fff, #a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent} /* TEXT LOGO */
     header p{font-size:1.1rem; opacity:0.9; margin-bottom:20px}
-   .search-box{max-width:500px; margin:0 auto 25px}
-   .search-box input{width:100%; padding:12px 18px; border:none; border-radius:50px; font-size:1rem; outline:none; color:#000}
-   .stats{display:flex; justify-content:center; gap:30px; margin-bottom:20px; flex-wrap:wrap}
-   .stat{text-align:center}.stat h2{font-size:1.8rem}.stat p{opacity:0.8; font-size:0.9rem}
-   .container{max-width:1100px; margin:0 auto; padding:15px}
-   .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:18px}
-   .card{background:rgba(255,255,255,0.15); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:20px; border-radius:15px; text-align:center; text-decoration:none; transition:0.3s}
-   .card:hover{transform:translateY(-5px); background:rgba(255,255,255,0.25)}
-   .card.icon{font-size:2.8rem; margin-bottom:10px}
-   .card h3{font-size:1.2rem; margin-bottom:6px}
-   .card p{opacity:0.85; font-size:0.85rem}
-   .hidden{display:none}
+  .search-box{max-width:500px; margin:0 auto 25px}
+  .search-box input{width:100%; padding:12px 18px; border:none; border-radius:50px; font-size:1rem; outline:none; color:#000}
+  .stats{display:flex; justify-content:center; gap:30px; margin-bottom:20px; flex-wrap:wrap}
+  .stat{text-align:center}.stat h2{font-size:1.8rem}.stat p{opacity:0.8; font-size:0.9rem}
+  .container{max-width:1100px; margin:0 auto; padding:15px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:18px}
+  .card{background:rgba(255,255,255,0.15); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.2); color:#fff; padding:20px; border-radius:15px; text-align:center; text-decoration:none; transition:0.3s}
+  .card:hover{transform:translateY(-5px); background:rgba(255,255,255,0.25)}
+  .card.icon{font-size:2.8rem; margin-bottom:10px}
+  .card h3{font-size:1.2rem; margin-bottom:6px}
+  .card p{opacity:0.85; font-size:0.85rem}
+  .hidden{display:none}
     footer{text-align:center; padding:25px 15px; opacity:0.7}
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Toolora Logo" class="main-logo">
+    <h1>Toolora</h1> <!-- YAHAN LOGO KI JAGAH TEXT HAI -->
     <p>The Last Toolkit You Will Ever Need</p>
     <div class="search-box"><input type="text" id="searchInput" placeholder="Search for a tool..."></div>
     <div class="stats"><div class="stat"><h2>6+</h2><p>Free Tools</p></div><div class="stat"><h2>100%</h2><p>Free Forever</p></div><div class="stat"><h2>0</h2><p>Ads</p></div></div>
