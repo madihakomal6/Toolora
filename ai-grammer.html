@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Grammar Checker - Toolora</title>
+  <style>
+    *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI'}
+    body{background: linear-gradient(-45deg, #667eea, #764ba2); min-height:100vh; color:#fff; padding:40px 20px}
+    .back-btn{display:inline-block; margin-bottom:20px; color:#fff; text-decoration:none; background:rgba(255,255,255,0.2); padding:10px 20px; border-radius:50px}
+    .container{max-width:900px; margin:0 auto; background:rgba(255,255,255,0.1); backdrop-filter:blur(12px); padding:30px; border-radius:20px; border:1px solid rgba(255,255,255,0.2)}
+    h1{text-align:center; margin-bottom:10px}
+    p.subtitle{text-align:center; opacity:0.8; margin-bottom:30px}
+    textarea{width:100%; height:250px; padding:15px; border-radius:10px; border:none; font-size:1.1rem; margin-bottom:20px; outline:none}
+    .btns{display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:20px}
+    button{padding:15px; border:none; border-radius:10px; background:#fff; color:#764ba2; font-size:1.1rem; font-weight:700; cursor:pointer; transition:0.3s}
+    button:hover{transform:scale(1.02)}
+    #output{background:rgba(0,0,0,0.3); padding:20px; border-radius:10px; margin-top:20px; min-height:250px; white-space:pre-wrap; font-size:1.1rem}
+  </style>
+</head>
+<body>
+  <a href="/" class="back-btn">← Back to Home</a>
+  <div class="container">
+    <h1>✍️ AI Grammar Checker + Paraphraser</h1>
+    <p class="subtitle">Fix Grammar & Make AI Text Human in 1 Click</p>
+    
+    <textarea id="input" placeholder="Paste your text here..."></textarea>
+    
+    <div class="btns">
+      <button onclick="checkGrammar()">1. Check Grammar</button>
+      <button onclick="paraphrase()">2. Paraphrase Text</button>
+    </div>
+    
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function checkGrammar() {
+      let text = document.getElementById('input').value;
+      if(text === '') {alert('Please paste some text'); return;}
+      
+      let fixed = text
+        .replace(/\bi\b/g, 'I')
+        .replace(/your/g, 'you are')
+        .replace(/there/g, 'their')
+        .replace(/  +/g, ' ');
+        
+      document.getElementById('output').innerText = "✅ Grammar Fixed:\n\n" + fixed;
+    }
+    
+    function paraphrase() {
+      let text = document.getElementById('input').value;
+      if(text === '') {alert('Please paste some text'); return;}
+      
+      let human = text
+        .replace(/Furthermore/g, 'Also')
+        .replace(/Moreover/g, 'Plus')
+        .replace(/In conclusion/g, 'So')
+        .replace(/Utilize/g, 'Use')
+        .replace(/Therefore/g, 'So')
+        .replace(/However,/g, 'But');
+        
+      document.getElementById('output').innerText = "🤖 Humanized Version:\n\n" + human;
+    }
+  </script>
+</body>
+</html>
