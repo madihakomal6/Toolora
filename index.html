@@ -8,25 +8,28 @@
     *{margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif}
     body{background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height:100vh; color:#fff}
     
-    header{text-align:center; padding:50px 20px}
-    header h1{font-size:3rem; margin-bottom:10px}
-    header p{font-size:1.2rem; opacity:0.9}
+    header{text-align:center; padding:40px 20px}
+    header .logo{width:80px; height:80px; margin-bottom:15px} /* Apne logo ke liye */
+    header h1{font-size:2.8rem; margin-bottom:10px}
+    header p{font-size:1.1rem; opacity:0.9}
     
-    .container{max-width:1100px; margin:0 auto; padding:20px}
-    .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px}
+    .container{max-width:1000px; margin:0 auto; padding:20px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:20px}
     
-    .card{background:rgba(255,255,255,0.95); color:#333; padding:30px; border-radius:20px; text-align:center; transition:0.3s; text-decoration:none; box-shadow:0 10px 30px rgba(0,0,0,0.2)}
-    .card:hover{transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,0,0,0.3)}
-    .card .icon{font-size:3rem; margin-bottom:15px}
-    .card h3{font-size:1.5rem; margin-bottom:10px; color:#667eea}
+    .card{background:#fff; color:#333; padding:25px; border-radius:20px; text-align:center; transition:0.3s; text-decoration:none; box-shadow:0 8px 25px rgba(0,0,0,0.15)}
+    .card:hover{transform:translateY(-8px)}
+    .card .icon{font-size:3.5rem; margin-bottom:15px}
+    .card h3{font-size:1.4rem; margin-bottom:8px; color:#667eea}
     .card p{color:#666; font-size:0.95rem}
     
-    footer{text-align:center; padding:30px; opacity:0.8}
+    footer{text-align:center; padding:30px; opacity:0.8; font-size:0.9rem}
   </style>
 </head>
 <body>
   <header>
-    <h1>🚀 Toolora</h1>
+    <!-- Yahan apna logo lag jayega -->
+    <img src="/logo.png" alt="Toolora Logo" class="logo"> 
+    <h1>Toolora</h1>
     <p>100% Free, Fast & No Ads Tools</p>
   </header>
 
@@ -73,7 +76,7 @@
   </div>
 
   <footer>
-    © 2026 Toolora. Made with ❤️ in Pakistan
+    © 2026 Toolora. All Rights Reserved. Made in Pakistan 🇵🇰
   </footer>
 </body>
 </html>
