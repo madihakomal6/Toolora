@@ -4,116 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toolora Gold - 9 Free Pro Online Tools</title>
-    <meta name="description" content="Toolora Gold: AI Grammar, Pro Resume PDF, QR, Age, BMI, Password, Word Counter, Image JPG, PDF to Text. 100% Free.">
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-291J219BVP"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-291J219BVP');</script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
     <style>
     *{margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif;}
     body{background: linear-gradient(135deg, #FFD700, #FF8C00); min-height:100vh; color:#222;}
     header{text-align:center; padding:40px 20px; color:#fff;}
     header h1{font-size: 40px; font-weight:800;} header p{font-size: 18px; margin-top:5px;}
-   .container{max-width: 1200px; margin: 0 auto; padding: 20px 20px 100px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;}
-   .tool-card{background: white; border-radius: 15px; padding: 30px 25px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-top: 5px solid #FF8C00; transition:0.3s;}
-   .tool-card:hover{transform: translateY(-5px);}
-   .tool-card h3{margin-bottom: 10px; color: #FF8C00; font-size: 22px;}
-   .tool-card p{color:#555; font-size:14px; margin-bottom:15px;}
-   .tool-card button{padding: 12px 30px; background: #FF8C00; color: white; border:none; border-radius: 8px; cursor:pointer; font-size:16px; font-weight:bold;}
-   .tool-card button:hover{background:#E67E00;}
-   .tool-form{display:none; background:white; max-width:950px; margin:30px auto; padding:35px; border-radius:20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);}
-   .tool-form h2{color:#FF8C00; margin-bottom:20px; border-bottom:3px solid #FFA500; padding-bottom:10px;}
-   .tool-form input,.tool-form textarea{width:100%; padding:14px; border:2px solid #FFA500; border-radius:10px; font-size:16px; margin-bottom:18px;}
-   .tool-form button{background:#FF8C00; color:white; border:none; padding:14px 28px; border-radius:10px; margin:5px; cursor:pointer; font-weight:bold; font-size:16px;}
-   .tool-form button:hover{background:#E67E00;}
-   .pro-output{border:3px solid #FF8C00; padding:25px; border-radius:12px; background:#FFF8E1; margin-top:20px; white-space: pre-wrap; max-height:400px; overflow-y:auto;}
-   .back-btn{background:#777!important;}
-   .back-btn:hover{background:#555!important;}
+ .container{max-width: 1200px; margin: 0 auto; padding: 20px 20px 100px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;}
+ .tool-card{background: white; border-radius: 15px; padding: 30px 25px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border-top: 5px solid #FF8C00;}
+ .tool-card h3{margin-bottom: 10px; color: #FF8C00; font-size: 22px;}
+ .tool-card button{padding: 12px 30px; background: #FF8C00; color: white; border:none; border-radius: 8px; cursor:pointer; font-size:16px; font-weight:bold;}
+ .tool-form{display:none; background:white; max-width:950px; margin:30px auto; padding:35px; border-radius:20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);}
+ .tool-form h2{color:#FF8C00; margin-bottom:20px; border-bottom:3px solid #FFA500; padding-bottom:10px;}
+ .tool-form input,.tool-form textarea{width:100%; padding:14px; border:2px solid #FFA500; border-radius:10px; font-size:16px; margin-bottom:18px;}
+ .tool-form button{background:#FF8C00; color:white; border:none; padding:14px 28px; border-radius:10px; margin:5px; cursor:pointer; font-weight:bold; font-size:16px;}
+ .pro-output{border:3px solid #FF8C00; padding:25px; border-radius:12px; background:#FFF8E1; margin-top:20px; white-space: pre-wrap; max-height:500px; overflow-y:auto;}
+ .back-btn{background:#777!important;}
 
-    /* PRO RESUME DESIGN */
-   .resume-preview{background:#fff; border:1px solid #ddd; border-radius:8px; overflow:hidden;}
-   .resume-pro{font-size:14px; color:#333; line-height:1.6;}
-   .resume-pro-header{display:flex; background:#1a1a1a; color:white; padding:30px;}
-   .resume-pro-header h1{font-size:32px; margin:0;}
-   .resume-pro-header p{margin:5px 0; font-size:16px; color:#FFA500;}
-   .resume-pro-contact{font-size:12px; margin-top:10px;}
-   .resume-pro-body{display:flex;}
-   .resume-pro-left{width:35%; background:#f5f5f5; padding:25px;}
-   .resume-pro-right{width:65%; padding:25px;}
-   .resume-pro-section{margin-bottom:20px;}
-   .resume-pro-section h3{color:#FF8C00; border-bottom:2px solid #FF8C00; padding-bottom:5px; margin-bottom:10px; font-size:16px;}
+    /* CANVA STYLE RESUME */
+ .resume-canva{border:1px solid #ddd; border-radius:10px; overflow:hidden; background:white;}
+ .resume-grid{display:grid; grid-template-columns: 35% 65%;}
+ .resume-left{background:#1F2937; color:white; padding:30px 20px;}
+ .resume-left h2{color:#FBBF24; font-size:16px; border-bottom:2px solid #FBBF24; padding-bottom:8px; margin:20px 0 15px 0;}
+ .resume-left p,.resume-left li{font-size:13px; margin-bottom:8px; list-style:none;}
+ .resume-right{padding:30px 25px;}
+ .resume-right h1{font-size:38px; color:#1F2937; margin:0; font-weight:800;}
+ .resume-right h2{font-size:18px; color:#FF8C00; margin-bottom:15px; font-weight:600;}
+ .resume-right h3{font-size:15px; color:#FF8C00; border-left:4px solid #FF8C00; padding-left:10px; margin:20px 0 10px 0; font-weight:700;}
     </style>
 </head>
 <body>
     <header><h1>Toolora Gold</h1><p>9 Free Pro Tools - 100% Working</p></header>
 
     <div class="container" id="toolList">
-        <div class="tool-card"><h3>AI Grammar Checker</h3><p>Real AI Grammar + Spelling Check</p><button onclick="showTool('grammar')">Use Tool</button></div>
-        <div class="tool-card"><h3>Pro Resume Builder</h3><p>2-Column Designed PDF Resume</p><button onclick="showTool('resume')">Use Tool</button></div>
-        <div class="tool-card"><h3>Age Calculator</h3><p>Exact Age in Years, Months, Days</p><button onclick="showTool('age')">Use Tool</button></div>
-        <div class="tool-card"><h3>BMI Calculator</h3><p>BMI + Health Category</p><button onclick="showTool('bmi')">Use Tool</button></div>
-        <div class="tool-card"><h3>QR Generator</h3><p>Generate + Download QR Image</p><button onclick="showTool('qr')">Use Tool</button></div>
-        <div class="tool-card"><h3>Password Generator</h3><p>Strong Password + Copy Button</p><button onclick="showTool('password')">Use Tool</button></div>
-        <div class="tool-card"><h3>Word Counter</h3><p>Words, Characters, Reading Time</p><button onclick="showTool('word')">Use Tool</button></div>
-        <div class="tool-card"><h3>Image to JPG</h3><p>Convert Any Image to JPG</p><button onclick="showTool('image')">Use Tool</button></div>
-        <div class="tool-card"><h3>PDF to Text</h3><p>Extract Text from PDF File</p><button onclick="showTool('pdf')">Use Tool</button></div>
+        <div class="tool-card"><h3>AI Grammar Checker</h3><button onclick="showTool('grammar')">Use Tool</button></div>
+        <div class="tool-card"><h3>Pro Resume Builder</h3><button onclick="showTool('resume')">Use Tool</button></div>
+        <div class="tool-card"><h3>Age Calculator</h3><button onclick="showTool('age')">Use Tool</button></div>
+        <div class="tool-card"><h3>BMI Calculator</h3><button onclick="showTool('bmi')">Use Tool</button></div>
+        <div class="tool-card"><h3>QR Generator</h3><button onclick="showTool('qr')">Use Tool</button></div>
+        <div class="tool-card"><h3>Password Generator</h3><button onclick="showTool('password')">Use Tool</button></div>
+        <div class="tool-card"><h3>Word Counter</h3><button onclick="showTool('word')">Use Tool</button></div>
+        <div class="tool-card"><h3>Image to JPG</h3><button onclick="showTool('image')">Use Tool</button></div>
+        <div class="tool-card"><h3>PDF to Text</h3><button onclick="showTool('pdf')">Use Tool</button></div>
     </div>
 
-    <!-- 1. AI GRAMMAR -->
-    <div class="tool-form" id="grammar"><h2>AI Grammar Checker</h2><textarea id="grammarText" rows="8" placeholder="Paste your English text here..."></textarea><button onclick="checkGrammar()">Check Grammar</button><div class="pro-output" id="grammarResult">Result will appear here</div><button class="back-btn" onclick="hideTool('grammar')">Back to Tools</button></div>
-
-    <!-- 2. PRO RESUME -->
+    <!-- PRO RESUME CANVA STYLE -->
     <div class="tool-form" id="resume">
-        <h2>Pro Resume Builder</h2>
-        <input type="text" id="rname" placeholder="Full Name">
-        <input type="text" id="rjob" placeholder="Job Title e.g. Senior Web Developer">
-        <input type="email" id="remail" placeholder="Email Address">
-        <input type="text" id="rphone" placeholder="Phone Number">
+        <h2>Pro Resume Builder - Canva Style</h2>
+        <input type="text" id="rname" placeholder="Full Name - e.g. Misbah Eman">
+        <input type="text" id="rjob" placeholder="Job Title - e.g. Web Developer">
+        <input type="email" id="remail" placeholder="Email">
+        <input type="text" id="rphone" placeholder="Phone">
         <input type="text" id="rlocation" placeholder="City, Country">
-        <textarea id="rsummary" rows="3" placeholder="Professional Summary - 2 to 3 lines about you"></textarea>
-        <textarea id="rskills" rows="3" placeholder="Skills: HTML, CSS, JavaScript, React, Node.js"></textarea>
-        <textarea id="rexp" rows="4" placeholder="Work Experience: Company Name | Role | 2022-2024 | Achievement 1, Achievement 2"></textarea>
+        <textarea id="rsummary" rows="3" placeholder="Professional Summary - 2 lines about you"></textarea>
+        <textarea id="rskills" rows="3" placeholder="Skills: HTML, CSS, JavaScript, React - comma se alag karein"></textarea>
+        <textarea id="rexp" rows="4" placeholder="Work Experience: Company Name | Role | 2021-2024 | Achievement"></textarea>
         <textarea id="reducation" rows="3" placeholder="Education: Degree | University | Year"></textarea>
         <button onclick="buildProResume()">Generate Pro Resume & Download PDF</button>
-        <div class="resume-preview" id="resumeOutput" style="margin-top:20px;"><p style="text-align:center; padding:50px;">Your Pro Resume Preview will appear here</p></div>
+
+        <div class="resume-canva" id="resumeOutput" style="margin-top:20px;">
+            <p style="text-align:center; padding:50px;">Fill form and click Generate. Your Canva Style Resume Preview will appear here</p>
+        </div>
         <button class="back-btn" onclick="hideTool('resume')">Back to Tools</button>
     </div>
 
-    <!-- 3. AGE -->
-    <div class="tool-form" id="age"><h2>Age Calculator</h2><input type="date" id="dob"><button onclick="calcAge()">Calculate Age</button><div class="pro-output" id="ageResult">Select your Date of Birth</div><button class="back-btn" onclick="hideTool('age')">Back to Tools</button></div>
-
-    <!-- 4. BMI -->
-    <div class="tool-form" id="bmi"><h2>BMI Calculator</h2><input type="number" id="weight" placeholder="Weight in KG"><input type="number" id="height" placeholder="Height in CM"><button onclick="calcBMI()">Calculate BMI</button><div class="pro-output" id="bmiResult">Enter Weight and Height</div><button class="back-btn" onclick="hideTool('bmi')">Back to Tools</button></div>
-
-    <!-- 5. QR -->
-    <div class="tool-form" id="qr"><h2>QR Code Generator</h2><input type="text" id="qrText" placeholder="Enter URL or Text: https://toolora-gold.vercel.app"><button onclick="genQR()">Generate QR</button><div class="pro-output" id="qrcode" style="text-align:center;"></div><button onclick="downloadQR()">Download QR Image</button><button class="back-btn" onclick="hideTool('qr')">Back to Tools</button></div>
-
-    <!-- 6. PASSWORD -->
-    <div class="tool-form" id="password"><h2>Password Generator</h2><label>Password Length: </label><input type="number" id="passLen" value="16" min="8" max="32"><button onclick="genPassword()">Generate Password</button><div class="pro-output" id="passResult">Click Generate</div><button onclick="copyPass()">Copy Password</button><button class="back-btn" onclick="hideTool('password')">Back to Tools</button></div>
-
-    <!-- 7. WORD -->
-    <div class="tool-form" id="word"><h2>Word Counter</h2><textarea id="wordText" rows="8" placeholder="Paste your text here..."></textarea><button onclick="countWords()">Count Words</button><div class="pro-output" id="wordResult">Stats will appear here</div><button class="back-btn" onclick="hideTool('word')">Back to Tools</button></div>
-
-    <!-- 8. IMAGE -->
-    <div class="tool-form" id="image"><h2>Image to JPG Converter</h2><input type="file" id="imgUpload" accept="image/*"><button onclick="convertImage()">Convert & Download JPG</button><div class="pro-output">Select PNG, WEBP, or any image. It will auto download as JPG.</div><button class="back-btn" onclick="hideTool('image')">Back to Tools</button></div>
-
-    <!-- 9. PDF -->
-    <div class="tool-form" id="pdf"><h2>PDF to Text Extractor</h2><input type="file" id="pdfUpload" accept=".pdf"><button onclick="readPDF()">Extract Text</button><div class="pro-output" id="pdfResult">Select a PDF file</div><button class="back-btn" onclick="hideTool('pdf')">Back to Tools</button></div>
+    <!-- BAQI 8 TOOLS -->
+    <div class="tool-form" id="grammar"><h2>AI Grammar Checker</h2><textarea id="grammarText" rows="8" placeholder="Paste your English text here..."></textarea><button onclick="checkGrammar()">Check Grammar</button><div class="pro-output" id="grammarResult">Result will appear here</div><button class="back-btn" onclick="hideTool('grammar')">Back</button></div>
+    <div class="tool-form" id="age"><h2>Age Calculator</h2><input type="date" id="dob"><button onclick="calcAge()">Calculate Age</button><div class="pro-output" id="ageResult">Select your Date of Birth</div><button class="back-btn" onclick="hideTool('age')">Back</button></div>
+    <div class="tool-form" id="bmi"><h2>BMI Calculator</h2><input type="number" id="weight" placeholder="Weight in KG"><input type="number" id="height" placeholder="Height in CM"><button onclick="calcBMI()">Calculate BMI</button><div class="pro-output" id="bmiResult">Enter Weight and Height</div><button class="back-btn" onclick="hideTool('bmi')">Back</button></div>
+    <div class="tool-form" id="qr"><h2>QR Code Generator</h2><input type="text" id="qrText" placeholder="Enter URL or Text"><button onclick="genQR()">Generate QR</button><div class="pro-output" id="qrcode" style="text-align:center;"></div><button onclick="downloadQR()">Download QR Image</button><button class="back-btn" onclick="hideTool('qr')">Back</button></div>
+    <div class="tool-form" id="password"><h2>Password Generator</h2><input type="number" id="passLen" value="16" min="8" max="32"><button onclick="genPassword()">Generate Password</button><div class="pro-output" id="passResult">Click Generate</div><button onclick="copyPass()">Copy Password</button><button class="back-btn" onclick="hideTool('password')">Back</button></div>
+    <div class="tool-form" id="word"><h2>Word Counter</h2><textarea id="wordText" rows="8" placeholder="Paste your text here..."></textarea><button onclick="countWords()">Count Words</button><div class="pro-output" id="wordResult">Stats will appear here</div><button class="back-btn" onclick="hideTool('word')">Back</button></div>
+    <div class="tool-form" id="image"><h2>Image to JPG Converter</h2><input type="file" id="imgUpload" accept="image/*"><button onclick="convertImage()">Convert & Download JPG</button><div class="pro-output">Select PNG, WEBP, or any image. It will auto download as JPG.</div><button class="back-btn" onclick="hideTool('image')">Back</button></div>
+    <div class="tool-form" id="pdf"><h2>PDF to Text</h2><p style="margin-bottom:15px; color:red;">Note: Browser me PDF direct read karna mushkil hai. PDF khol kar text copy karke neeche paste karein.</p><textarea id="pdfInput" rows="6" placeholder="PDF ka text yahan paste karein..."></textarea><button onclick="countWordsFromPDF()">Count Words</button><div class="pro-output" id="pdfResult">Result yahan ayega</div><button class="back-btn" onclick="hideTool('pdf')">Back</button></div>
 
 <script>
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
-
 function showTool(id){document.getElementById('toolList').style.display = 'none'; document.getElementById(id).style.display = 'block'; window.scrollTo(0,0);}
 function hideTool(id){document.getElementById(id).style.display = 'none'; document.getElementById('toolList').style.display = 'grid';}
 
-// 1. AI GRAMMAR
-async function checkGrammar(){let text = document.getElementById('grammarText').value; let box = document.getElementById('grammarResult'); if(text.trim() === ''){box.innerText = 'Please enter text!'; return;} box.innerText = 'Checking...'; try{let res = await fetch('https://api.languagetool.org/v2/check', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:'language=en-US&text='+encodeURIComponent(text)}); let data = await res.json(); if(data.matches.length === 0){box.innerText = '✅ Perfect! No mistakes found.';} else {let out = 'Found '+data.matches.length+' issues:\n\n'; data.matches.forEach((m,i)=>{out += (i+1)+'. '+m.message+'\nSuggestion: '+ (m.replacements[0]?.value || 'N/A') +'\n\n';}); box.innerText = out;}}catch(e){box.innerText = 'Error. Check internet connection.'}}
-
-// 2. PRO RESUME
+// CANVA STYLE RESUME FUNCTION
 function buildProResume(){
     let name = document.getElementById('rname').value || 'Your Name';
     let job = document.getElementById('rjob').value || 'Job Title';
@@ -121,328 +94,63 @@ function buildProResume(){
     let phone = document.getElementById('rphone').value;
     let location = document.getElementById('rlocation').value;
     let summary = document.getElementById('rsummary').value;
-    let skills = document.getElementById('rskills').value.split(',').map(s=>'<li>'+s.trim()+'</li>').join('');
-    let exp = document.getElementById('rexp').value;
-    let edu = document.getElementById('reducation').value;
+    let skills = document.getElementById('rskills').value.split(',').map(s=>'<li>• '+s.trim()+'</li>').join('');
+    let exp = document.getElementById('rexp').value.replace(/\n/g, '<br>');
+    let edu = document.getElementById('reducation').value.replace(/\n/g, '<br>');
 
-    let html = `<div class="resume-pro">
-        <div class="resume-pro-header">
-            <div><h1>${name}</h1><p>${job}</p><div class="resume-pro-contact">${email} | ${phone} | ${location}</div></div>
+    let html = `<div class="resume-grid">
+        <div class="resume-left">
+            <h2>CONTACT</h2>
+            <p>${email}</p>
+            <p>${phone}</p>
+            <p>${location}</p>
+            <h2>SKILLS</h2>
+            <ul>${skills}</ul>
         </div>
-        <div class="resume-pro-body">
-            <div class="resume-pro-left">
-                <div class="resume-pro-section"><h3>SKILLS</h3><ul>${skills}</ul></div>
-                <div class="resume-pro-section"><h3>CONTACT</h3><p>${email}</p><p>${phone}</p><p>${location}</p></div>
-            </div>
-            <div class="resume-pro-right">
-                <div class="resume-pro-section"><h3>PROFESSIONAL SUMMARY</h3><p>${summary}</p></div>
-                <div class="resume-pro-section"><h3>WORK EXPERIENCE</h3><p>${exp}</p></div>
-                <div class="resume-pro-section"><h3>EDUCATION</h3><p>${edu}</p></div>
-            </div>
+        <div class="resume-right">
+            <h1>${name}</h1>
+            <h2>${job}</h2>
+            <h3>PROFESSIONAL SUMMARY</h3>
+            <p>${summary}</p>
+            <h3>WORK EXPERIENCE</h3>
+            <p>${exp}</p>
+            <h3>EDUCATION</h3>
+            <p>${edu}</p>
         </div>
-        <p style="text-align:center; padding:10px; font-size:12px; color:gray;">Generated by TooloraGold.vercel.app</p>
-    </div>`;
+    </div>
+    <p style="text-align:center; padding:10px; font-size:12px; color:gray;">Generated by TooloraGold.vercel.app</p>`;
+
     document.getElementById('resumeOutput').innerHTML = html;
 
+    // PDF DOWNLOAD
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-    doc.setFontSize(22); doc.text(name, 105, 20, {align: 'center'});
-    doc.setFontSize(14); doc.text(job, 105, 28, {align: 'center'});
-    doc.setFontSize(10); doc.text(email + ' | ' + phone + ' | ' + location, 105, 35, {align: 'center'});
-    let y = 50;
-    doc.setFontSize(12); doc.text('PROFESSIONAL SUMMARY', 10, y); y+=7; doc.setFontSize(10); doc.text(summary, 10, y, {maxWidth:190}); y+=20;
-    doc.setFontSize(12); doc.text('SKILLS', 10, y); y+=7; doc.setFontSize(10); doc.text(document.getElementById('rskills').value, 10, y, {maxWidth:190}); y+=20;
-    doc.setFontSize(12); doc.text('WORK EXPERIENCE', 10, y); y+=7; doc.setFontSize(10); doc.text(exp, 10, y, {maxWidth:190}); y+=20;
-    doc.setFontSize(12); doc.text('EDUCATION', 10, y); y+=7; doc.setFontSize(10); doc.text(edu, 10, y, {maxWidth:190});
+    // Left side black
+    doc.setFillColor(31,41,55); doc.rect(0,0,75,297,'F');
+    doc.setTextColor(255,255,255); doc.setFontSize(14); doc.text('CONTACT', 10, 20);
+    doc.setFontSize(10); doc.text(email, 10, 30); doc.text(phone, 10, 37); doc.text(location, 10, 44);
+    doc.setFontSize(14); doc.text('SKILLS', 10, 60);
+    document.getElementById('rskills').value.split(',').forEach((s,i)=>doc.text('• '+s.trim(), 10, 70+i*7));
+    // Right side
+    doc.setTextColor(0,0,0); doc.setFontSize(24); doc.text(name, 85, 25);
+    doc.setFontSize(14); doc.text(job, 85, 35);
+    doc.setFontSize(12); doc.text('PROFESSIONAL SUMMARY', 85, 50); doc.setFontSize(10); doc.text(summary, 85, 58, {maxWidth:120});
+    doc.setFontSize(12); doc.text('WORK EXPERIENCE', 85, 80); doc.setFontSize(10); doc.text(document.getElementById('rexp').value, 85, 88, {maxWidth:120});
+    doc.setFontSize(12); doc.text('EDUCATION', 85, 110); doc.setFontSize(10); doc.text(document.getElementById('reducation').value, 85, 118, {maxWidth:120});
     doc.save(name + '-Resume.pdf');
 }
 
-// 3. AGE
-function calcAge(){let dob = new Date(document.getElementById('dob').value); let t = new Date(); let y = t.getFullYear() - dob.getFullYear(); let m = t.getMonth() - dob.getMonth(); let d = t.getDate() - dob.getDate(); if(d<0){m--; d+=30;} if(m<0){y--; m+=12;} document.getElementById('ageResult').innerText = 'Your Exact Age:\n'+y+' Years\n'+m+' Months\n'+d+' Days';}
-
-// 4. BMI
-function calcBMI(){let w = document.getElementById('weight').value; let h = document.getElementById('height').value / 100; let bmi = (w / (h*h)).toFixed(1); let s = bmi < 18.5? 'Underweight' : bmi < 24.9? 'Normal Weight ✅' : bmi < 29.9? 'Overweight' : 'Obese'; document.getElementById('bmiResult').innerText = 'Your BMI: '+bmi+'\nHealth Status: '+s;}
-
-// 5. QR
-function genQR(){let text = document.getElementById('qrText').value; document.getElementById('qrcode').innerHTML = ""; if(text.trim() === ''){alert('Enter text!'); return;} new QRCode(document.getElementById("qrcode"), {text: text, width: 220, height: 220});}
-function downloadQR(){let img = document.getElementById('qrcode').getElementsByTagName('img')[0]; if(!img){alert("Generate QR first!"); return;} let a = document.createElement('a'); a.href = img.src; a.download = 'TooloraGold-QR.png'; a.click();}
-
-// 6. PASSWORD
-function genPassword(){let len = document.getElementById('passLen').value; let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()'; let pass = ''; for(let i=0; i<len; i++){pass += chars.charAt(Math.floor(Math.random() * chars.length));} document.getElementById('passResult').innerText = pass;}
-function copyPass(){navigator.clipboard.writeText(document.getElementById('passResult').innerText); alert('Password Copied!');}
-
-// 7. WORD
-function countWords(){let text = document.getElementById('wordText').value; let words = text.trim().split(/\s+/).filter(w=>w).length; let chars = text.length; let sentences = text.split(/[.!?]+/).filter(s=>s.trim()).length; document.getElementById('wordResult').innerText = 'Words: '+words+'\nCharacters: '+chars+'\nSentences: '+sentences+'\nReading Time: ~'+Math.ceil(words/200)+' minutes';}
-
-// 8. IMAGE
-function convertImage(){let file = document.getElementById('imgUpload').files[0]; if(!file){alert('Select image!'); return;} let reader = new FileReader(); reader.onload = e => {let img = new Image(); img.onload = () => {let c = document.createElement('canvas'); c.width=img.width; c.height=img.height; c.getContext('2d').drawImage(img,0,0); let a = document.createElement('a'); a.href=c.toDataURL('image/jpeg', 0.9); a.download='TooloraGold.jpg'; a.click();} img.src = e.target.result;} reader.readAsDataURL(file);}
-
-// 9. PDF
-async function readPDF(){let file = document.getElementById('pdfUpload').files[0]; let box = document.getElementById('pdfResult'); if(!file){alert('Pehle PDF select karo'); return;} box.innerText = 'Reading PDF... Please wait'; let reader = new FileReader(); reader.onload = async function() {let pdf = await pdfjsLib.getDocument({data: reader.result}).promise; let text = ''; for(let i=1; i<=pdf.numPages; i++){let page = await pdf.getPage(i); let content = await page.getTextContent(); text += content.items.map(s => s.str).join(' ') + '\n\n';} box.innerText = text || 'No text found in this PDF';} reader.readAsArrayBuffer(file);}
-</script>
-</body>
-            </html>
-        <div class="tool-card"><h3>Age Calculator</h3><p>Exact Age Y, M, D</p><button onclick="showTool('age')">Use Tool</button></div>
-        <div class="tool-card"><h3>BMI Calculator</h3><p>BMI + Health Status</p><button onclick="showTool('bmi')">Use Tool</button></div>
-        <div class="tool-card"><h3>QR Generator</h3><p>Generate + Download QR</p><button onclick="showTool('qr')">Use Tool</button></div>
-        <div class="tool-card"><h3>Password Generator</h3><p>Strong + Copy</p><button onclick="showTool('password')">Use Tool</button></div>
-        <div class="tool-card"><h3>Word Counter</h3><p>Words + Reading Time</p><button onclick="showTool('word')">Use Tool</button></div>
-        <div class="tool-card"><h3>Image to JPG</h3><p>Convert & Download</p><button onclick="showTool('image')">Use Tool</button></div>
-        <div class="tool-card"><h3>PDF to Text</h3><p>Extract Text</p><button onclick="showTool('pdf')">Use Tool</button></div>
-    </div>
-
-    <!-- 1. GRAMMAR -->
-    <div class="tool-form" id="grammar"><h2>AI Grammar Checker</h2><textarea id="grammarText" rows="6" placeholder="Paste your English text here..."></textarea><button onclick="checkGrammar()">Check Grammar</button><div class="pro-output" id="grammarResult">Result will appear here</div><button class="back-btn" onclick="hideTool('grammar')">Back</button></div>
-
-    <!-- 2. RESUME PRO -->
-    <div class="tool-form" id="resume">
-        <h2>Pro Resume Builder</h2>
-        <input type="text" id="rname" placeholder="Full Name">
-        <input type="text" id="rjob" placeholder="Job Title e.g. Web Developer">
-        <input type="email" id="remail" placeholder="Email">
-        <input type="text" id="rphone" placeholder="Phone Number">
-        <textarea id="rsummary" rows="3" placeholder="Professional Summary"></textarea>
-        <textarea id="rskills" rows="3" placeholder="Skills: HTML, CSS, JavaScript"></textarea>
-        <textarea id="rexp" rows="3" placeholder="Experience: Company - Role - 2022 to 2024"></textarea>
-        <textarea id="reducation" rows="3" placeholder="Education: Degree - University - Year"></textarea>
-        <button onclick="buildProResume()">Generate & Download PDF</button>
-        <div class="resume-preview" id="resumeOutput" style="margin-top:20px;"><p style="text-align:center; padding:50px;">Your designed resume will appear here</p></div>
-        <button class="back-btn" onclick="hideTool('resume')">Back</button>
-    </div>
-
-    <!-- 3. AGE -->
-    <div class="tool-form" id="age"><h2>Age Calculator</h2><input type="date" id="dob"><button onclick="calcAge()">Calculate Age</button><div class="pro-output" id="ageResult">Your age will appear here</div><button class="back-btn" onclick="hideTool('age')">Back</button></div>
-
-    <!-- 4. BMI -->
-    <div class="tool-form" id="bmi"><h2>BMI Calculator</h2><input type="number" id="weight" placeholder="Weight in KG"><input type="number" id="height" placeholder="Height in CM"><button onclick="calcBMI()">Calculate BMI</button><div class="pro-output" id="bmiResult">Your BMI will appear here</div><button class="back-btn" onclick="hideTool('bmi')">Back</button></div>
-
-    <!-- 5. QR -->
-    <div class="tool-form" id="qr"><h2>QR Code Generator</h2><input type="text" id="qrText" placeholder="Enter URL: https://toolora-gold.vercel.app"><button onclick="genQR()">Generate QR</button><div class="pro-output" id="qrcode" style="text-align:center;"></div><button onclick="downloadQR()">Download QR Image</button><button class="back-btn" onclick="hideTool('qr')">Back</button></div>
-
-    <!-- 6. PASSWORD -->
-    <div class="tool-form" id="password"><h2>Password Generator</h2><input type="number" id="passLen" value="16" placeholder="Length"><button onclick="genPassword()">Generate Password</button><div class="pro-output" id="passResult">Password will appear here</div><button onclick="copyPass()">Copy Password</button><button class="back-btn" onclick="hideTool('password')">Back</button></div>
-
-    <!-- 7. WORD -->
-    <div class="tool-form" id="word"><h2>Word Counter</h2><textarea id="wordText" rows="6" placeholder="Paste your text here..."></textarea><button onclick="countWords()">Count Words</button><div class="pro-output" id="wordResult">Stats will appear here</div><button class="back-btn" onclick="hideTool('word')">Back</button></div>
-
-    <!-- 8. IMAGE -->
-    <div class="tool-form" id="image"><h2>Image to JPG</h2><input type="file" id="imgUpload" accept="image/*"><button onclick="convertImage()">Convert & Download JPG</button><button class="back-btn" onclick="hideTool('image')">Back</button></div>
-
-    <!-- 9. PDF -->
-    <div class="tool-form" id="pdf"><h2>PDF to Text</h2><p>Browser me PDF read karne ke liye server chahiye. For now use: ilovepdf.com/pdf-to-text</p><button class="back-btn" onclick="hideTool('pdf')">Back</button></div>
-
-<script>
-// SABSE PEHLE WAIT KARO LIBRARY LOAD HONE TAK
-document.addEventListener('DOMContentLoaded', function() {
-
-function showTool(id){document.getElementById('toolList').style.display = 'none'; document.getElementById(id).style.display = 'block'; window.scrollTo(0,0);}
-function hideTool(id){document.getElementById(id).style.display = 'none'; document.getElementById('toolList').style.display = 'grid';}
-
-window.showTool = showTool;
-window.hideTool = hideTool;
-
-window.checkGrammar = async function(){
-    let text = document.getElementById('grammarText').value;
-    let box = document.getElementById('grammarResult');
-    if(text.trim() === ''){box.innerText = 'Please enter text!'; return;}
-    box.innerText = 'Checking...';
-    try{
-        let res = await fetch('https://api.languagetool.org/v2/check', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:'language=en-US&text='+encodeURIComponent(text)});
-        let data = await res.json();
-        if(data.matches.length === 0){box.innerText = '✅ No mistakes found!';}
-        else {let out = 'Found ' + data.matches.length + ' issues:\n\n'; data.matches.forEach((m,i)=>{out += (i+1)+'. '+m.message+'\nFix: '+ (m.replacements[0]?.value || 'N/A') +'\n\n';}); box.innerText = out;}
-    }catch(e){box.innerText = 'Error. Internet check karo.'}
-}
-
-window.buildProResume = function(){
-    let name = document.getElementById('rname').value || 'Your Name';
-    let job = document.getElementById('rjob').value || 'Job Title';
-    let email = document.getElementById('remail').value;
-    let phone = document.getElementById('rphone').value;
-    let summary = document.getElementById('rsummary').value;
-    let skills = document.getElementById('rskills').value;
-    let exp = document.getElementById('rexp').value;
-    let edu = document.getElementById('reducation').value;
-
-    let html = `
-        <div class="resume-header">
-            <h1>${name}</h1>
-            <p>${job}</p>
-            <p>${email} | ${phone}</p>
-        </div>
-        <div>
-            <div class="resume-section"><h3>PROFESSIONAL SUMMARY</h3><p>${summary}</p></div>
-            <div class="resume-section"><h3>SKILLS</h3><p>${skills}</p></div>
-            <div class="resume-section"><h3>WORK EXPERIENCE</h3><p>${exp}</p></div>
-            <div class="resume-section"><h3>EDUCATION</h3><p>${edu}</p></div>
-            <p style="text-align:center; padding:10px; font-size:12px; color:gray;">Generated by TooloraGold.vercel.app</p>
-        </div>
-    `;
-    document.getElementById('resumeOutput').innerHTML = html;
-
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    doc.setFontSize(20); doc.text(name, 105, 20, {align: 'center'});
-    doc.setFontSize(12); doc.text(job, 105, 28, {align: 'center'});
-    doc.setFontSize(10); doc.text(email + ' | ' + phone, 105, 35, {align: 'center'});
-    doc.setFontSize(12); let y = 50;
-    doc.text('PROFESSIONAL SUMMARY', 10, y); y+=7; doc.text(summary, 10, y, {maxWidth:190}); y+=20;
-    doc.text('SKILLS', 10, y); y+=7; doc.text(skills, 10, y, {maxWidth:190}); y+=20;
-    doc.text('WORK EXPERIENCE', 10, y); y+=7; doc.text(exp, 10, y, {maxWidth:190}); y+=20;
-    doc.text('EDUCATION', 10, y); y+=7; doc.text(edu, 10, y, {maxWidth:190});
-    doc.save(name + '-Resume.pdf');
-}
-
-window.calcAge = function(){
-    let dob = new Date(document.getElementById('dob').value);
-    let t = new Date();
-    let y = t.getFullYear() - dob.getFullYear();
-    let m = t.getMonth() - dob.getMonth();
-    let d = t.getDate() - dob.getDate();
-    if(d<0){m--; d+=30;} if(m<0){y--; m+=12;}
-    document.getElementById('ageResult').innerText = 'Your Age: '+y+' Years, '+m+' Months, '+d+' Days';
-}
-
-window.calcBMI = function(){
-    let w = document.getElementById('weight').value;
-    let h = document.getElementById('height').value / 100;
-    let bmi = (w / (h*h)).toFixed(1);
-    let s = bmi < 18.5? 'Underweight' : bmi < 24.9? 'Normal' : bmi < 29.9? 'Overweight' : 'Obese';
-    document.getElementById('bmiResult').innerText = 'Your BMI: '+bmi+'\nStatus: '+s;
-}
-
-window.genQR = function(){
-    let text = document.getElementById('qrText').value;
-    document.getElementById('qrcode').innerHTML = "";
-    if(text.trim() === ''){alert('Enter text!'); return;}
-    new QRCode(document.getElementById("qrcode"), {text: text, width: 200, height: 200});
-}
-
-window.downloadQR = function(){
-    let img = document.getElementById('qrcode').getElementsByTagName('img')[0];
-    if(!img){alert("Generate QR first!"); return;}
-    let a = document.createElement('a'); a.href = img.src; a.download = 'TooloraGold-QR.png'; a.click();
-}
-
-window.genPassword = function(){
-    let len = document.getElementById('passLen').value;
-    let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%';
-    let pass = '';
-    for(let i=0; i<len; i++){pass += chars.charAt(Math.floor(Math.random() * chars.length));}
-    document.getElementById('passResult').innerText = pass;
-}
-
-window.copyPass = function(){navigator.clipboard.writeText(document.getElementById('passResult').innerText); alert('Copied!');}
-
-window.countWords = function(){
-    let text = document.getElementById('wordText').value;
-    let words = text.trim().split(/\s+/).filter(w=>w).length;
-    document.getElementById('wordResult').innerText = 'Words: '+words+'\nCharacters: '+text.length+'\nReading Time: ~'+Math.ceil(words/200)+' min';
-}
-
-window.convertImage = function(){
-    let file = document.getElementById('imgUpload').files[0];
-    if(!file){alert('Select image!'); return;}
-    let reader = new FileReader();
-    reader.onload = e => {
-        let img = new Image();
-        img.onload = () => {
-            let c = document.createElement('canvas'); c.width=img.width; c.height=img.height;
-            c.getContext('2d').drawImage(img,0,0);
-            let a = document.createElement('a'); a.href=c.toDataURL('image/jpeg'); a.download='TooloraGold.jpg'; a.click();
-        }
-        img.src = e.target.result;
-    }
-    reader.readAsDataURL(file);
-}
-
-}); // DOMContentLoaded end
-</script>
-</body>
-</html>
-        </div>
-        <button class="back-btn" onclick="hideTool('resume')">Back</button>
-    </div>
-
-    <!-- BAQI TOOLS SAME -->
-    <div class="tool-form" id="grammar"><h2>AI Grammar Checker</h2><textarea id="grammarText" rows="6" placeholder="Paste your English text here..."></textarea><button onclick="checkGrammar()">Check Grammar</button><div class="pro-output" style="padding:25px;"><span id="grammarResult">Result will appear here</span></div><button class="back-btn" onclick="hideTool('grammar')">Back</button></div>
-    <div class="tool-form" id="age"><h2>Age Calculator</h2><input type="date" id="dob"><button onclick="calcAge()">Calculate Age</button><div class="pro-output" style="padding:25px;"><span id="ageResult">Your age will appear here</span></div><button class="back-btn" onclick="hideTool('age')">Back</button></div>
-    <div class="tool-form" id="bmi"><h2>BMI Calculator</h2><input type="number" id="weight" placeholder="Weight in KG"><input type="number" id="height" placeholder="Height in CM"><button onclick="calcBMI()">Calculate BMI</button><div class="pro-output" style="padding:25px;"><span id="bmiResult">Your BMI will appear here</span></div><button class="back-btn" onclick="hideTool('bmi')">Back</button></div>
-    <div class="tool-form" id="qr"><h2>QR Code Generator</h2><input type="text" id="qrText" placeholder="Enter URL"><button onclick="genQR()">Generate QR</button><div class="pro-output" id="qrcode" style="text-align:center; padding:25px;"></div><button onclick="downloadQR()">Download QR Image</button><button class="back-btn" onclick="hideTool('qr')">Back</button></div>
-    <div class="tool-form" id="password"><h2>Password Generator</h2><input type="number" id="passLen" value="16" placeholder="Length"><button onclick="genPassword()">Generate Password</button><div class="pro-output" style="padding:25px;"><span id="passResult">Password will appear here</span></div><button onclick="copyPass()">Copy Password</button><button class="back-btn" onclick="hideTool('password')">Back</button></div>
-    <div class="tool-form" id="word"><h2>Word Counter</h2><textarea id="wordText" rows="6" placeholder="Paste your text here..."></textarea><button onclick="countWords()">Count Words</button><div class="pro-output" style="padding:25px;"><span id="wordResult">Stats will appear here</span></div><button class="back-btn" onclick="hideTool('word')">Back</button></div>
-    <div class="tool-form" id="image"><h2>Image to JPG</h2><input type="file" id="imgUpload" accept="image/*"><button onclick="convertImage()">Convert & Download JPG</button><button class="back-btn" onclick="hideTool('image')">Back</button></div>
-    <div class="tool-form" id="pdf"><h2>PDF to Text</h2><p>Browser me PDF read karne ke liye server chahiye. For now use: ilovepdf.com/pdf-to-text</p><button class="back-btn" onclick="hideTool('pdf')">Back</button></div>
-
-<script>
-const { jsPDF } = window.jspdf;
-function showTool(id){document.getElementById('toolList').style.display = 'none'; document.getElementById(id).style.display = 'block'; window.scrollTo(0,0);}
-function hideTool(id){document.getElementById(id).style.display = 'none'; document.getElementById('toolList').style.display = 'grid';}
-
-function buildProResume(){
-    let name = document.getElementById('rname').value;
-    let job = document.getElementById('rjob').value;
-    let email = document.getElementById('remail').value;
-    let phone = document.getElementById('rphone').value;
-    let summary = document.getElementById('rsummary').value;
-    let skills = document.getElementById('rskills').value;
-    let exp = document.getElementById('rexp').value;
-    let edu = document.getElementById('reducation').value;
-
-    let html = `
-        <div class="resume-header">
-            <h1>${name}</h1>
-            <p>${job}</p>
-            <p>${email} | ${phone}</p>
-        </div>
-        <div style="padding:25px;">
-            <div class="resume-section">
-                <h3>PROFESSIONAL SUMMARY</h3>
-                <p>${summary}</p>
-            </div>
-            <div class="resume-section">
-                <h3>SKILLS</h3>
-                <p>${skills}</p>
-            </div>
-            <div class="resume-section">
-                <h3>WORK EXPERIENCE</h3>
-                <p>${exp}</p>
-            </div>
-            <div class="resume-section">
-                <h3>EDUCATION</h3>
-                <p>${edu}</p>
-            </div>
-            <p style="text-align:center; margin-top:20px; font-size:12px; color:gray;">Generated by TooloraGold.vercel.app</p>
-        </div>
-    `;
-    document.getElementById('resumeOutput').innerHTML = html;
-
-    // PDF me download
-    const doc = new jsPDF();
-    doc.setFontSize(22);
-    doc.text(name, 105, 20, {align: 'center'});
-    doc.setFontSize(14);
-    doc.text(job, 105, 28, {align: 'center'});
-    doc.setFontSize(10);
-    doc.text(email + ' | ' + phone, 105, 35, {align: 'center'});
-    doc.setFontSize(12);
-    let y = 50;
-    doc.text('PROFESSIONAL SUMMARY', 10, y); y+=7; doc.text(summary, 10, y, {maxWidth:190}); y+=25;
-    doc.text('SKILLS', 10, y); y+=7; doc.text(skills, 10, y, {maxWidth:190}); y+=25;
-    doc.text('WORK EXPERIENCE', 10, y); y+=7; doc.text(exp, 10, y, {maxWidth:190}); y+=25;
-    doc.text('EDUCATION', 10, y); y+=7; doc.text(edu, 10, y, {maxWidth:190});
-    doc.save(name + '-Resume.pdf');
-}
-
-async function checkGrammar(){let text = document.getElementById('grammarText').value; let box = document.getElementById('grammarResult'); if(text.trim() === ''){box.innerText = 'Please enter text!'; return;} box.innerText = 'Checking...'; let res = await fetch('https://api.languagetool.org/v2/check', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:'language=en-US&text='+encodeURIComponent(text)}); let data = await res.json(); if(data.matches.length === 0){box.innerText = '✅ No mistakes found!';} else {let out = 'Found ' + data.matches.length + ' issues:\n\n'; data.matches.forEach((m,i)=>{out += (i+1)+'. '+m.message+'\nFix: '+ (m.replacements[0]?.value || 'N/A') +'\n\n';}); box.innerText = out;}}
-function calcAge(){let dob = new Date(document.getElementById('dob').value); let t = new Date(); let y = t.getFullYear() - dob.getFullYear(); let m = t.getMonth() - dob.getMonth(); let d = t.getDate() - dob.getDate(); if(d<0){m--; d+=30;} if(m<0){y--; m+=12;} document.getElementById('ageResult').innerText = 'Your Age: '+y+' Years, '+m+' Months, '+d+' Days';}
-function calcBMI(){let w = document.getElementById('weight').value; let h = document.getElementById('height').value / 100; let bmi = (w / (h*h)).toFixed(1); let s = bmi < 18.5? 'Underweight' : bmi < 24.9? 'Normal' : bmi < 29.9? 'Overweight' : 'Obese'; document.getElementById('bmiResult').innerText = 'Your BMI: '+bmi+'\nStatus: '+s;}
-function genQR(){let text = document.getElementById('qrText').value; document.getElementById('qrcode').innerHTML = ""; if(text.trim() === ''){alert('Enter text!'); return;} new QRCode(document.getElementById("qrcode"), {text: text, width: 200, height: 200});}
-function downloadQR(){let img = document.getElementById('qrcode').getElementsByTagName('img')[0]; if(!img){alert("Generate QR first!"); return;} let a = document.createElement('a'); a.href = img.src; a.download = 'TooloraGold-QR.png'; a.click();}
-function genPassword(){let len = document.getElementById('passLen').value; let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%'; let pass = ''; for(let i=0; i<len; i++){pass += chars.charAt(Math.floor(Math.random() * chars.length));} document.getElementById('passResult').innerText = pass;}
-function copyPass(){navigator.clipboard.writeText(document.getElementById('passResult').innerText); alert('Copied!');}
-function countWords(){let text = document.getElementById('wordText').value; let words = text.trim().split(/\s+/).filter(w=>w).length; document.getElementById('wordResult').innerText = 'Words: '+words+'\nCharacters: '+text.length+'\nReading Time: ~'+Math.ceil(words/200)+' min';}
-function convertImage(){let file = document.getElementById('imgUpload').files[0]; if(!file){alert('Select image!'); return;} let reader = new FileReader(); reader.onload = e => {let img = new Image(); img.onload = () => {let c = document.createElement('canvas'); c.width=img.width; c.height=img.height; c.getContext('2d').drawImage(img,0,0); let a = document.createElement('a'); a.href=c.toDataURL('image/jpeg'); a.download='TooloraGold.jpg'; a.click();} img.src = e.target.result;} reader.readAsDataURL(file);}
+// BAQI TOOLS
+async function checkGrammar(){let t=document.getElementById('grammarText').value; let b=document.getElementById('grammarResult'); if(!t.trim()){b.innerText='Enter text'; return;} b.innerText='Checking...'; let r=await fetch('https://api.languagetool.org/v2/check',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'language=en-US&text='+encodeURIComponent(t)}); let d=await r.json(); b.innerText=d.matches.length===0?'✅ No mistakes':d.matches.map((m,i)=>`${i+1}. ${m.message}\nFix: ${m.replacements[0]?.value||'N/A'}`).join('\n\n');}
+function calcAge(){let d=new Date(document.getElementById('dob').value); let t=new Date(); let y=t.getFullYear()-d.getFullYear(); let m=t.getMonth()-d.getMonth(); let da=t.getDate()-d.getDate(); if(da<0){m--; da+=30;} if(m<0){y--; m+=12;} document.getElementById('ageResult').innerText=`${y} Years, ${m} Months, ${da} Days`;}
+function calcBMI(){let w=document.getElementById('weight').value; let h=document.getElementById('height').value/100; let b=(w/(h*h)).toFixed(1); let s=b<18.5?'Underweight':b<24.9?'Normal ✅':b<29.9?'Overweight':'Obese'; document.getElementById('bmiResult').innerText=`BMI: ${b}\nStatus: ${s}`;}
+function genQR(){let t=document.getElementById('qrText').value; document.getElementById('qrcode').innerHTML=""; if(t.trim()) new QRCode(document.getElementById("qrcode"),{text:t,width:220,height:220});}
+function downloadQR(){let i=document.getElementById('qrcode').getElementsByTagName('img')[0]; if(i){let a=document.createElement('a'); a.href=i.src; a.download='QR.png'; a.click();}}
+function genPassword(){let l=document.getElementById('passLen').value; let c='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%'; let p=''; for(let i=0;i<l;i++)p+=c[Math.floor(Math.random()*c.length)]; document.getElementById('passResult').innerText=p;}
+function copyPass(){navigator.clipboard.writeText(document.getElementById('passResult').innerText); alert('Copied');}
+function countWords(){let t=document.getElementById('wordText').value; let w=t.trim().split(/\s+/).filter(x=>x).length; document.getElementById('wordResult').innerText=`Words: ${w}\nChars: ${t.length}\nTime: ~${Math.ceil(w/200)} min`;}
+function convertImage(){let f=document.getElementById('imgUpload').files[0]; if(!f)return; let r=new FileReader(); r.onload=e=>{let i=new Image(); i.onload=()=>{let c=document.createElement('canvas'); c.width=i.width; c.height=i.height; c.getContext('2d').drawImage(i,0,0); let a=document.createElement('a'); a.href=c.toDataURL('image/jpeg'); a.download='image.jpg'; a.click();}; i.src=e.target.result;}; r.readAsDataURL(f);}
+function countWordsFromPDF(){let text = document.getElementById('pdfInput').value; let words = text.trim().split(/\s+/).filter(w=>w).length; document.getElementById('pdfResult').innerText = 'Words: '+words+'\n\nFull Text:\n'+text;}
 </script>
 </body>
 </html>
