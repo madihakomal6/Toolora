@@ -2,30 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toolora Gold - 9 Free Pro Tools</title>
+<title>Toolora Gold - 9 Free Pro Online Tools</title>
+<meta name="description" content="Free AI Grammar Checker, Pro Resume Builder with Photo, PDF to Text, QR Generator, BMI, Age Calculator">
 <link rel="icon" href="data:image/svg+xml,<svg><text y='.9em' font-size='90'>🏆</text></svg>">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
-body{margin:0; font-family:Arial; background:#F8F9FA;}
-.navbar{background:#1F2937; color:white; padding:15px; text-align:center; font-size:24px; font-weight:bold;}
-.navbar span{color:#FF8C00;}
-.hero{text-align:center; padding:40px 20px; background: linear-gradient(135deg, #FFD700, #FF8C00); color:#fff;}
-.container{display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px; padding:30px;}
-.tool-card{background:white; padding:25px; border-radius:15px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.1); border-top:4px solid #FF8C00;}
-.tool-card button{padding:12px 25px; background:#FF8C00; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:bold; margin-top:10px;}
-.tool-form{display:none; background:white; max-width:900px; margin:20px auto; padding:30px; border-radius:15px;}
-.tool-form input,.tool-form textarea{width:100%; padding:12px; margin-bottom:15px; border:2px solid #FFA500; border-radius:8px;}
-.tool-form button{background:#FF8C00; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; margin:5px;}
-.pro-output{border:2px solid #FF8C00; padding:20px; border-radius:10px; background:#FFF8E1; margin-top:15px; white-space:pre-wrap;}
+*{margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial;}
+body{background:#F8F9FA;}
+.navbar{background:#1F2937; color:white; padding:15px 5%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0;}
+.navbar.logo{font-size:26px; font-weight:800; color:#FFD700;}
+.navbar.logo span{color:#FF8C00;}
+.navbar.menu a{color:white; text-decoration:none; margin-left:20px; font-weight:600;}
+.hero{text-align:center; padding:60px 20px; background: linear-gradient(135deg, #FFD700, #FF8C00); color:#fff;}
+.hero h1{font-size: 45px; font-weight:800;}
+.container{display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:25px; padding:40px 5%;}
+.tool-card{background:white; padding:30px; border-radius:15px; text-align:center; box-shadow:0 8px 25px rgba(0,0,0,0.1); border-top:5px solid #FF8C00;}
+.tool-card h3{color:#FF8C00; font-size:22px; margin-bottom:10px;}
+.tool-card button{padding:12px 30px; background:#FF8C00; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:bold; font-size:16px;}
+.tool-form{display:none; background:white; max-width:950px; margin:30px auto; padding:35px; border-radius:20px; box-shadow:0 10px 40px rgba(0,0,0,0.2);}
+.tool-form h2{color:#FF8C00; border-bottom:3px solid #FFA500; padding-bottom:10px; margin-bottom:20px;}
+.tool-form input,.tool-form textarea{width:100%; padding:14px; border:2px solid #FFA500; border-radius:10px; margin-bottom:18px; font-size:16px;}
+.tool-form button{background:#FF8C00; color:white; border:none; padding:14px 28px; border-radius:10px; margin:5px; cursor:pointer; font-weight:bold;}
+.pro-output{border:3px solid #FF8C00; padding:25px; border-radius:12px; background:#FFF8E1; margin-top:20px; white-space:pre-wrap;}
 .back-btn{background:#777!important;}
-.footer{text-align:center; padding:20px; background:#1F2937; color:white; margin-top:30px;}
+.footer{text-align:center; padding:30px; background:#1F2937; color:white; margin-top:40px;}
+
+/* CANVA PRO RESUME */
+.resume-canva{border:1px solid #ddd; border-radius:10px; overflow:hidden; background:white;}
+.resume-grid{display:grid; grid-template-columns: 35% 65%;}
+.resume-left{background:#1F2937; color:white;}
+.resume-photo{width:100%; height:220px; background:#333; display:flex; align-items:center; justify-content:center; overflow:hidden; color:#aaa;}
+.resume-photo img{width:100%; height:100%; object-fit:cover;}
+.resume-left-content{padding:25px 20px;}
+.resume-left h2{color:#FBBF24; font-size:16px; border-bottom:2px solid #FBBF24; padding-bottom:8px; margin:20px 0 15px 0;}
+.resume-right{padding:30px 25px;}
+.resume-right h1{font-size:38px; color:#1F2937; font-weight:800;}
+.resume-right h2{font-size:18px; color:#FF8C00;}
+.resume-right h3{font-size:15px; color:#FF8C00; border-bottom:1px solid #eee; padding-bottom:8px; margin:20px 0 10px 0;}
+.resume-divider{height:1px; background:#eee; margin:15px 0;}
 </style>
 </head>
 <body>
 
-<div class="navbar">Toolora<span>Gold</span></div>
-<div class="hero"><h1>9 Free Pro Online Tools</h1></div>
+<div class="navbar">
+    <div class="logo">Toolora<span>Gold</span></div>
+    <div class="menu"><a href="#" onclick="window.location.reload()">Home</a></div>
+</div>
+
+<div class="hero">
+    <h1>9 Free Pro Online Tools</h1>
+    <p>Build Pro Resume, Check Grammar, Generate QR, and More - 100% Free</p>
+</div>
 
 <div class="container" id="toolList">
 <div class="tool-card"><h3>AI Grammar Checker</h3><button onclick="showTool('grammar')">Use Tool</button></div>
@@ -39,41 +67,53 @@ body{margin:0; font-family:Arial; background:#F8F9FA;}
 <div class="tool-card"><h3>PDF to Text</h3><button onclick="showTool('pdf')">Use Tool</button></div>
 </div>
 
-<div class="tool-form" id="grammar"><h2>AI Grammar Checker</h2><textarea id="grammarText" rows="6" placeholder="Enter text"></textarea><button onclick="checkGrammar()">Check Grammar</button><div class="pro-output" id="grammarResult"></div><button class="back-btn" onclick="hideTool('grammar')">Back</button></div>
+<!-- RESUME CANVA WALA WAPIS -->
+<div class="tool-form" id="resume"><h2>Pro Resume Builder - With Photo</h2>
+<input type="file" id="rphoto" accept="image/*">
+<input id="rname" placeholder="Full Name">
+<input id="rjob" placeholder="Job Title">
+<input id="remail" placeholder="Email">
+<input id="rphone" placeholder="Phone">
+<input id="rlocation" placeholder="City, Country">
+<textarea id="rsummary" rows="3" placeholder="Professional Summary"></textarea>
+<textarea id="rskills" rows="3" placeholder="Skills: HTML, CSS, JS"></textarea>
+<textarea id="rexp" rows="4" placeholder="Work Experience"></textarea>
+<textarea id="reducation" rows="3" placeholder="Education"></textarea>
+<button onclick="buildProResume()">Generate & Download PDF</button>
+<div class="resume-canva" id="resumeOutput" style="margin-top:20px;"></div>
+<button class="back-btn" onclick="hideTool('resume')">Back</button></div>
 
-<div class="tool-form" id="resume"><h2>Pro Resume Builder</h2><input type="file" id="rphoto" accept="image/*"><input id="rname" placeholder="Full Name"><input id="rjob" placeholder="Job Title"><input id="remail" placeholder="Email"><input id="rphone" placeholder="Phone"><textarea id="rskills" placeholder="Skills"></textarea><button onclick="buildProResume()">Generate & Download PDF</button><div id="resumeOutput"></div><button class="back-btn" onclick="hideTool('resume')">Back</button></div>
+<div class="tool-form" id="pdf"><h2>PDF to Text</h2><input type="file" id="pdfUpload" accept=".pdf"><button onclick="readPDF()">Extract Text</button><div class="pro-output" id="pdfResult"></div><button class="back-btn" onclick="hideTool('pdf')">Back</button></div>
 
-<div class="tool-form" id="age"><h2>Age Calculator</h2><input type="date" id="dob"><button onclick="calcAge()">Calculate Age</button><div class="pro-output" id="ageResult"></div><button class="back-btn" onclick="hideTool('age')">Back</button></div>
+<div class="tool-form" id="grammar"><h2>AI Grammar Checker</h2><textarea id="grammarText" rows="8"></textarea><button onclick="checkGrammar()">Check</button><div class="pro-output" id="grammarResult"></div><button class="back-btn" onclick="hideTool('grammar')">Back</button></div>
+<div class="tool-form" id="age"><h2>Age Calculator</h2><input type="date" id="dob"><button onclick="calcAge()">Calculate</button><div class="pro-output" id="ageResult"></div><button class="back-btn" onclick="hideTool('age')">Back</button></div>
+<div class="tool-form" id="bmi"><h2>BMI Calculator</h2><input id="weight" type="number" placeholder="KG"><input id="height" type="number" placeholder="CM"><button onclick="calcBMI()">Calculate</button><div class="pro-output" id="bmiResult"></div><button class="back-btn" onclick="hideTool('bmi')">Back</button></div>
+<div class="tool-form" id="qr"><h2>QR Generator</h2><input id="qrText"><button onclick="genQR()">Generate</button><div class="pro-output" id="qrcode"></div><button onclick="downloadQR()">Download</button><button class="back-btn" onclick="hideTool('qr')">Back</button></div>
+<div class="tool-form" id="password"><h2>Password Generator</h2><input id="passLen" type="number" value="16"><button onclick="genPassword()">Generate</button><div class="pro-output" id="passResult"></div><button onclick="copyPass()">Copy</button><button class="back-btn" onclick="hideTool('password')">Back</button></div>
+<div class="tool-form" id="word"><h2>Word Counter</h2><textarea id="wordText" rows="8"></textarea><button onclick="countWords()">Count</button><div class="pro-output" id="wordResult"></div><button class="back-btn" onclick="hideTool('word')">Back</button></div>
+<div class="tool-form" id="image"><h2>Image to JPG</h2><input type="file" id="imgUpload" accept="image/*"><button onclick="convertImage()">Convert</button><button class="back-btn" onclick="hideTool('image')">Back</button></div>
 
-<div class="tool-form" id="bmi"><h2>BMI Calculator</h2><input id="weight" type="number" placeholder="Weight KG"><input id="height" type="number" placeholder="Height CM"><button onclick="calcBMI()">Calculate BMI</button><div class="pro-output" id="bmiResult"></div><button class="back-btn" onclick="hideTool('bmi')">Back</button></div>
-
-<div class="tool-form" id="qr"><h2>QR Code Generator</h2><input id="qrText" placeholder="Enter URL or Text"><button onclick="genQR()">Generate QR</button><div class="pro-output" id="qrcode"></div><button onclick="downloadQR()">Download QR</button><button class="back-btn" onclick="hideTool('qr')">Back</button></div>
-
-<div class="tool-form" id="password"><h2>Password Generator</h2><input id="passLen" type="number" value="16"><button onclick="genPassword()">Generate Password</button><div class="pro-output" id="passResult"></div><button onclick="copyPass()">Copy</button><button class="back-btn" onclick="hideTool('password')">Back</button></div>
-
-<div class="tool-form" id="word"><h2>Word Counter</h2><textarea id="wordText" rows="6"></textarea><button onclick="countWords()">Count Words</button><div class="pro-output" id="wordResult"></div><button class="back-btn" onclick="hideTool('word')">Back</button></div>
-
-<div class="tool-form" id="image"><h2>Image to JPG Converter</h2><input type="file" id="imgUpload" accept="image/*"><button onclick="convertImage()">Convert & Download</button><button class="back-btn" onclick="hideTool('image')">Back</button></div>
-
-<div class="tool-form" id="pdf"><h2>PDF to Text</h2><input type="file" id="pdfUpload" accept=".pdf"><button onclick="readPDF()">Extract Text</button><div class="pro-output" id="pdfResult">Upload PDF first</div><button class="back-btn" onclick="hideTool('pdf')">Back</button></div>
-
-<div class="footer">© 2026 Toolora Gold</div>
+<div class="footer"><p>© 2026 Toolora Gold. Made with ❤️ in Pakistan</p></div>
 
 <script>
+let resumePhotoBase64 = '';
 function showTool(id){document.getElementById('toolList').style.display='none'; document.getElementById(id).style.display='block'; window.scrollTo(0,0);}
 function hideTool(id){document.getElementById(id).style.display='none'; document.getElementById('toolList').style.display='grid';}
 
-async function checkGrammar(){let t=document.getElementById('grammarText').value; document.getElementById('grammarResult').innerText=t? 'Checking... Done!': 'Please enter text';}
-function calcAge(){let d=new Date(document.getElementById('dob').value); let y=new Date().getFullYear()-d.getFullYear(); document.getElementById('ageResult').innerText=y+' Years Old';}
+document.getElementById('rphoto').addEventListener('change', function(e){let file = e.target.files[0]; let reader = new FileReader(); reader.onload = function(event){resumePhotoBase64 = event.target.result;} reader.readAsDataURL(file);})
+
+function buildProResume(){let name = document.getElementById('rname').value || 'Your Name'; let job = document.getElementById('rjob').value; let email = document.getElementById('remail').value; let phone = document.getElementById('rphone').value; let location = document.getElementById('rlocation').value; let summary = document.getElementById('rsummary').value; let skills = document.getElementById('rskills').value.split(',').map(s=>'<li>• '+s.trim()+'</li>').join(''); let exp = document.getElementById('rexp').value.replace(/\n/g, '<br>'); let edu = document.getElementById('reducation').value.replace(/\n/g, '<br>'); let photoHTML = resumePhotoBase64? `<img src="${resumePhotoBase64}">` : `Upload Photo`; let html = `<div class="resume-grid"><div class="resume-left"><div class="resume-photo">${photoHTML}</div><div class="resume-left-content"><h2>CONTACT</h2><p>${email}</p><p>${phone}</p><p>${location}</p><h2>SKILLS</h2><ul>${skills}</ul></div></div><div class="resume-right"><h1>${name}</h1><h2>${job}</h2><div class="resume-divider"></div><h3>PROFESSIONAL SUMMARY</h3><p>${summary}</p><div class="resume-divider"></div><h3>WORK EXPERIENCE</h3><p>${exp}</p><div class="resume-divider"></div><h3>EDUCATION</h3><p>${edu}</p></div></div>`; document.getElementById('resumeOutput').innerHTML = html; const { jsPDF } = window.jspdf; const doc = new jsPDF(); doc.text(name, 10, 10); doc.save(name + '-Resume.pdf');}
+
+async function checkGrammar(){document.getElementById('grammarResult').innerText='Checking...';}
+function calcAge(){let d=new Date(document.getElementById('dob').value); let y=new Date().getFullYear()-d.getFullYear(); document.getElementById('ageResult').innerText=y+' Years';}
 function calcBMI(){let w=document.getElementById('weight').value; let h=document.getElementById('height').value/100; document.getElementById('bmiResult').innerText='BMI: '+(w/(h*h)).toFixed(1);}
-function genQR(){let t=document.getElementById('qrText').value; document.getElementById('qrcode').innerHTML=''; if(t) new QRCode(document.getElementById("qrcode"),t);}
-function downloadQR(){alert('Right click on QR > Save Image')}
+function genQR(){let t=document.getElementById('qrText').value; document.getElementById('qrcode').innerHTML=''; new QRCode(document.getElementById("qrcode"),t);}
+function downloadQR(){alert('Save QR')}
 function genPassword(){let l=document.getElementById('passLen').value; let p=''; for(let i=0;i<l;i++)p+=Math.random().toString(36)[2]; document.getElementById('passResult').innerText=p;}
-function copyPass(){navigator.clipboard.writeText(document.getElementById('passResult').innerText); alert('Copied!');}
-function countWords(){let w=document.getElementById('wordText').value.trim().split(/\s+/).length; document.getElementById('wordResult').innerText='Total Words: '+w;}
-function convertImage(){alert('Select image to convert')}
-function buildProResume(){alert('Fill details and PDF will download');}
-function readPDF(){alert('Select PDF file to extract text');}
+function copyPass(){navigator.clipboard.writeText(document.getElementById('passResult').innerText);}
+function countWords(){let w=document.getElementById('wordText').value.split(' ').length; document.getElementById('wordResult').innerText='Words: '+w;}
+function convertImage(){alert('Convert')}
+function readPDF(){alert('Upload PDF')}
 </script>
 </body>
 </html>
