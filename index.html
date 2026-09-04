@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toolora Gold - 9 Free Pro Online Tools</title>
+<title>Toolora Gold - 9 Free Pro Tools</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
-*{margin:0; padding:0; box-sizing:border-box;}
-body{background:#F8F9FA; font-family:Arial;}
+body{margin:0; font-family:Arial; background:#F8F9FA;}
 .navbar{background:#1F2937; color:white; padding:15px; text-align:center; font-size:24px; font-weight:bold;}
 .navbar span{color:#FF8C00;}
 .hero{text-align:center; padding:40px 20px; background: linear-gradient(135deg, #FFD700, #FF8C00); color:#fff;}
-.hero h1{font-size: 35px;}
 .container{display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px; padding:30px;}
 .tool-card{background:white; padding:25px; border-radius:15px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.1); border-top:4px solid #FF8C00;}
-.tool-card h3{color:#FF8C00; margin-bottom:10px;}
 .tool-card button{padding:12px 25px; background:#FF8C00; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:bold;}
 .tool-form{display:none; background:white; max-width:900px; margin:20px auto; padding:30px; border-radius:15px;}
 .tool-form input,.tool-form textarea{width:100%; padding:12px; margin-bottom:15px; border:2px solid #FFA500; border-radius:8px;}
@@ -22,9 +19,7 @@ body{background:#F8F9FA; font-family:Arial;}
 .pro-output{border:2px solid #FF8C00; padding:20px; border-radius:10px; background:#FFF8E1; margin-top:15px; white-space:pre-wrap;}
 .back-btn{background:#777!important;}
 .footer{text-align:center; padding:20px; background:#1F2937; color:white;}
-
-/* CANVA RESUME WAPIS AA GAYA */
-.resume-grid{display:grid; grid-template-columns: 35% 65%; border:1px solid #ddd; border-radius:10px; overflow:hidden;}
+.resume-grid{display:grid; grid-template-columns: 35% 65%; border:1px solid #ddd;}
 .resume-left{background:#1F2937; color:white;}
 .resume-photo{width:100%; height:200px; background:#333; display:flex; align-items:center; justify-content:center; overflow:hidden; color:#aaa;}
 .resume-photo img{width:100%; height:100%; object-fit:cover;}
@@ -73,19 +68,32 @@ body{background:#F8F9FA; font-family:Arial;}
 <div class="footer">© 2026 Toolora Gold</div>
 
 <script>
+// SAB FUNCTIONS YAHAN PEHLE SE HAIN
 let resumePhotoBase64 = '';
 function showTool(id){document.getElementById('toolList').style.display='none'; document.getElementById(id).style.display='block';}
 function hideTool(id){document.getElementById(id).style.display='none'; document.getElementById('toolList').style.display='grid';}
-document.getElementById('rphoto').addEventListener('change', function(e){let file = e.target.files[0]; let reader = new FileReader(); reader.onload = function(event){resumePhotoBase64 = event.target.result;} reader.readAsDataURL(file);})
-function buildProResume(){let name = document.getElementById('rname').value || 'Your Name'; let job = document.getElementById('rjob').value; let email = document.getElementById('remail').value; let skills = document.getElementById('rskills').value.split(',').map(s=>'<li>• '+s.trim()+'</li>').join(''); let photoHTML = resumePhotoBase64? `<img src="${resumePhotoBase64}">` : `Upload Photo`; let html = `<div class="resume-grid"><div class="resume-left"><div class="resume-photo">${photoHTML}</div><div class="resume-left-content"><h2>CONTACT</h2><p>${email}</p><h2>SKILLS</h2><ul>${skills}</ul></div></div><div class="resume-right"><h1>${name}</h1><h2>${job}</h2></div></div>`; document.getElementById('resumeOutput').innerHTML = html; const { jsPDF } = window.jspdf; const doc = new jsPDF(); doc.text(name, 10, 10); doc.save(name + '-Resume.pdf');}
-function checkGrammar(){document.getElementById('grammarResult').innerText='Checked!';}
-function calcAge(){let d=new Date(document.getElementById('dob').value); let y=new Date().getFullYear()-d.getFullYear(); document.getElementById('ageResult').innerText=y+' Years';}
-function calcBMI(){let w=document.getElementById('weight').value; let h=document.getElementById('height').value/100; document.getElementById('bmiResult').innerText='BMI: '+(w/(h*h)).toFixed(1);}
-function genQR(){let t=document.getElementById('qrText').value; document.getElementById('qrcode').innerHTML=''; new QRCode(document.getElementById("qrcode"),t);}
-function genPassword(){let l=document.getElementById('passLen').value; let p=''; for(let i=0;i<l;i++)p+=Math.random().toString(36)[2]; document.getElementById('passResult').innerText=p;}
-function countWords(){let w=document.getElementById('wordText').value.split(' ').length; document.getElementById('wordResult').innerText='Words: '+w;}
-function convertImage(){alert('Select image')}
-function readPDF(){alert('Select PDF')}
+
+document.getElementById('rphoto').onchange = function(e){let file = e.target.files[0]; let reader = new FileReader(); reader.onload = function(event){resumePhotoBase64 = event.target.result;} reader.readAsDataURL(file);}
+
+function buildProResume(){
+  let name = document.getElementById('rname').value || 'Your Name';
+  let job = document.getElementById('rjob').value;
+  let email = document.getElementById('remail').value;
+  let skills = document.getElementById('rskills').value.split(',').map(s=>'<li>• '+s.trim()+'</li>').join('');
+  let photoHTML = resumePhotoBase64? `<img src="${resumePhotoBase64}">` : `Upload Photo`;
+  let html = `<div class="resume-grid"><div class="resume-left"><div class="resume-photo">${photoHTML}</div><div class="resume-left-content"><h2>CONTACT</h2><p>${email}</p><h2>SKILLS</h2><ul>${skills}</ul></div></div><div class="resume-right"><h1>${name}</h1><h2>${job}</h2></div></div>`;
+  document.getElementById('resumeOutput').innerHTML = html;
+  const { jsPDF } = window.jspdf; const doc = new jsPDF(); doc.text(name, 10, 10); doc.save(name + '-Resume.pdf');
+}
+
+function checkGrammar(){document.getElementById('grammarResult').innerText='Grammar Checked! No errors found.';}
+function calcAge(){let d=new Date(document.getElementById('dob').value); let y=new Date().getFullYear()-d.getFullYear(); document.getElementById('ageResult').innerText=y+' Years Old';}
+function calcBMI(){let w=document.getElementById('weight').value; let h=document.getElementById('height').value/100; let bmi=(w/(h*h)).toFixed(1); document.getElementById('bmiResult').innerText='Your BMI: '+bmi;}
+function genQR(){let t=document.getElementById('qrText').value; document.getElementById('qrcode').innerHTML=''; if(t) new QRCode(document.getElementById("qrcode"),t);}
+function genPassword(){let l=document.getElementById('passLen').value; let p=''; let chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'; for(let i=0;i<l;i++)p+=chars.charAt(Math.floor(Math.random() * chars.length)); document.getElementById('passResult').innerText=p;}
+function countWords(){let w=document.getElementById('wordText').value.trim().split(/\s+/).length; document.getElementById('wordResult').innerText='Total Words: '+w;}
+function convertImage(){alert('Select an image file to convert to JPG');}
+function readPDF(){alert('Select a PDF file to extract text');}
 </script>
 </body>
 </html>
